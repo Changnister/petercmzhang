@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lan="en=CA">
+
+<head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/Images/Logo.png" />
+    <link rel="stylesheet" href="~/CSS/Header.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+   
+        <div class="navbar">
+            <p style="font-family:'Lucida Bright'">
+                <a href='~/Pages/Home.cshtml'> Home </a>
+                <a href='~/Pages/Aboutme.cshtml'> About Me </a>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        Projects
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="~/Pages/Vaccines.cshtml">Vaccines and Disease Eradication</a>
+                        <a href="~/Pages/3D PPE.cshtml">3D-Printing PPE in COVID-19</a>
+                        <a href="https://www.instagram.com/diariesofapharmd/">Daily Sketches</a>
+                    </div>
+                </div>
+            <p style="font-family:'Lucida Bright';font-size: 17px">
+                <a href='~/Pages/Tools.cshtml'> Tools </a>
+                <a href='~/Pages/Publications.cshtml'> Publications </a>
+                <a href='~/Pages/Contactme.cshtml'> Contact Me </a>
+            </p>
+        </div>
+    
+</body>
+</html>

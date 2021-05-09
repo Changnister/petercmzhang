@@ -1,0 +1,149 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lan="en=CA">
+
+<head>
+    <title> Contact Me </title>
+    @RenderPage("/Shared/Header.cshtml")
+    @RenderPage("/Shared/Footer.cshtml")
+</head>
+
+<body>
+    <link rel="stylesheet" href="~/CSS/Body.css">
+    <div class="row">
+        <div class="column middle">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p style="font-family:'Lucida Bright'; text-align:center;font-size:25px;color:black">
+            Leave a Message! </p>
+            <br>
+            <br>
+            <style>
+                input[type=text], select {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    font-family: Lucida Bright;
+                }
+
+                input[type=email], select {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    font-family: Lucida Bright;
+                }
+
+                button[type=submit] {
+                    width: 100%;
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+
+                    button[type=submit]:hover {
+                        background-color: #45a049;
+                    }
+
+                form {
+                    border-radius: 5px;
+                    padding: 50px;
+                }
+
+            </style>
+            <script type="text/javascript">var submitted = false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                    onload="if(submitted) {window.location='/Pages/Thankyou.cshtml';}"></iframe>
+           
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSeEoucyhJpK_qeK4vWKQ1leAZHWFNIng68_CFukpGjhH0o9Gg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+                    <label style="font-family:'Lucida Bright'; text-align:left;font-size:14px;color:black">
+                Email Address</label>
+                <input type="email" placeholder="Email address" name="entry.2133097459" required>
+
+                <label style="font-family:'Lucida Bright'; text-align:left;font-size:14px;color:black">
+                Name</label>
+                <input type="text" placeholder="Name" name="entry.304609756" required>
+
+                <label style="font-family:'Lucida Bright'; text-align:left;font-size:14px;color:black">
+                Subject</label>
+                <input type="text" placeholder="Subject" name="entry.380101998">
+
+                <label style="font-family:'Lucida Bright'; text-align:left;font-size:14px;color:black">
+                Message</label>
+                <input type="text" textarea rows="5" placeholder="Message" name="entry.1186796885" required>
+
+                <button type="submit">Send</button>
+                </form>
+            </div>
+         
+
+
+            <div class="column middle">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p style="font-family:'Lucida Bright'; text-align:center;font-size:20px;color:black">
+                Social Media </p>
+                <div class="column third">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="https://www.linkedin.com/in/peterxzhang/">
+                        <img src="~/Images/Linkedin Logo.png" alt="LinkedIn" class="centre" style="width:100px;height:100px;">
+                    </a>
+                </div>
+
+                <div class="column third">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="https://twitter.com/PCMZhang/">
+                        <img src="~/Images/Twitter Logo.png" alt="Twitter" class="centre" style="width:100px;height:100px;">
+                    </a>
+                </div>
+
+                <div class="column third">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="https://www.instagram.com/diariesofapharmd/">
+                        <img src="~/Images/Instagram Logo.png" alt="Instagram" class="centre" style="width:100px;height:100px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>

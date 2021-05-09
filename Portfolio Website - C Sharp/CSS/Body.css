@@ -1,0 +1,44 @@
+﻿.column {
+    float: left;
+}
+
+.left, .right {
+    width: 25%;
+}
+
+.middle {
+    width: 50%;
+}
+
+.third {
+    width: 33%
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 0.10px solid rgb(24, 4, 4);
+    max-width: 100%
+}
+
+.centre {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 100%
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+hr.dashed {
+    border-top: 1px dashed;
+    color: grey;
+    width: 55%;
+    margin: auto;
+}
+
