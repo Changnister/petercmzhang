@@ -217,13 +217,15 @@ html, body {
         width: 100%;
         text-align: center;
         padding-bottom: 10%;
+        padding-top: 5%;
+        font-size: 32px;
     }
 
     .blurb-item {
         margin:0;
         width: 100%;
         text-align: center;
-        padding-bottom: 10%;
+        padding-bottom: 20%;
     }
 
     .cv-item {
