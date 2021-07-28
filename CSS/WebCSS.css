@@ -6,8 +6,6 @@ html, body {
     min-height: 100vh;
 }
 
-
-
 .page-container {
     display: flex;
     flex-direction: column;
@@ -174,6 +172,7 @@ html, body {
     color: black;
     text-align: left;
     letter-spacing: 2px;
+    text-decoration: none;
 }
 
 @media (max-width: 800px) {
