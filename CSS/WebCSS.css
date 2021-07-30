@@ -115,6 +115,7 @@ html, body {
 .sm {
     padding: 25px;
     margin-right: 5%;
+    border-radius: 10%;
 }
 
 .sm:hover {
