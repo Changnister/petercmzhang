@@ -104,6 +104,41 @@ html, body {
     color: black; 
 }
 
+.socialmedia-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+    width: 55%;
+}
+
+.sm {
+    padding: 25px;
+    margin-right: 5%;
+}
+
+.sm:hover {
+    opacity: 0.7;
+}
+
+.sm-twitter {
+    background-image: url("../Images/Twittericon.png");
+    max-width: 100%;
+    height: auto;
+}
+
+.sm-linkedin {
+    background-image: url("../Images/Linkedinicon.png");
+    max-width: 100%;
+    height: auto;
+}
+
+.sm-instagram {
+    background-image: url("../Images/Instagramicon.png");
+    max-width: 100%;
+    height: auto;
+}
+
 .heroimage-container {
     display: flex;
     flex-direction: row;
