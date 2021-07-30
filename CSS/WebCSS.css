@@ -173,6 +173,10 @@ html, body {
     margin-bottom: 6px;
 }
 
+.list-items p:nth-child(2) {
+    color:#808080;
+}
+
 .list-items a {
     font-size: 18px;
     color: black;
