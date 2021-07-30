@@ -44,7 +44,7 @@ html, body {
     text-align: center;
     font-weight: bold;
     letter-spacing: 3px;
-    margin-right: 5%;
+    margin-right: 40px;
 }
 
 .nav-itemlast {
@@ -154,7 +154,7 @@ html, body {
     letter-spacing: 8px;
     margin-left: 11%;
     margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 30px;
 }
 
 .list-items {
@@ -164,7 +164,13 @@ html, body {
     letter-spacing: 2px;
     margin-left: 11%;
     margin-right: 20%;
+    margin-bottom: 24px;
     width: 75%;
+}
+
+.list-items p {
+    margin-top: 0;
+    margin-bottom: 6px;
 }
 
 .list-items a {
