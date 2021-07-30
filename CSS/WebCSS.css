@@ -113,9 +113,9 @@ html, body {
 }
 
 .sm {
-    padding: 25px;
+    padding: 20px;
     margin-right: 5%;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 .sm:hover {
@@ -281,5 +281,21 @@ html, body {
 
     .heroimage-item {
         display: none;
+    }
+
+    .sm {
+        padding: 20px;
+        margin-right: 5%;
+        border-radius: 7px;
+        margin-top: 10%;
+    }
+
+    .socialmedia-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+        margin-left: 2%;
     }
 }
