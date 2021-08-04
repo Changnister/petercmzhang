@@ -110,7 +110,7 @@ html, body {
     flex-wrap: nowrap;
     margin-top: 5%;
     width: 55%;
-    margin-right: 2%;
+    margin-left: 12px;
 }
 
 .sm {
