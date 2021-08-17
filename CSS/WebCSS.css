@@ -110,9 +110,9 @@ html, body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 5%;
+    margin-top: 4%;
     width: 55%;
-    margin-left: 12px;
+    margin-left: 14px;
 }
 
 .sm {
