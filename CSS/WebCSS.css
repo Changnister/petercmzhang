@@ -48,8 +48,8 @@ html, body {
 }
 
 .nav {
-        display: flex;
-        flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .nav-item:last-child {
@@ -109,15 +109,6 @@ html, body {
     letter-spacing: 1px;
     text-decoration: none;
     color: #ffffff;
-}
-
-.socialmedia-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top: 4%;
-    width: 55%;
-    margin-left: 14px;
 }
 
 .heroimage-container {
