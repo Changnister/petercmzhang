@@ -212,8 +212,7 @@ html, body {
         display: flex;
         flex-direction: column;
         width: auto;
-        margin-top: 24px;
-        margin-bottom: 24px;
+        margin: 0;
     }
 
     .header-item {
@@ -222,17 +221,24 @@ html, body {
 
     .nav {
         flex-direction: column;
+        width: 100%;
     }
     
     .nav-item {
         width: 100%;
         text-align: center;
         font-size: 16px;
+        padding-bottom: 5px;
+        padding-top: 5px;
         margin: 0;
     }
 
+    .nav-item:first-child{
+        padding-top: 15px;
+    }
+
     .nav-item:last-child {
-        margin-right: 0;
+        padding-bottom: 15px;
     }
 
     .home-container {
@@ -259,22 +265,22 @@ html, body {
 
     .list-image {
         margin: 0;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
 
     .introduction-item {
         font-size: 24px;
         width: 100%;
         text-align: center;
-        margin-bottom: 16px;
-        margin-top: 16px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     .blurb-item {
         margin: 16px 24px;
         text-align: center;
         width: auto;
-        margin-bottom: 32px;
+        margin-bottom: 36px;
     }
 
     .heroimage-item {
