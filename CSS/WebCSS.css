@@ -53,7 +53,7 @@ html, body {
     flex-direction: row;
 }
 
-.socialmedia-container {
+.socialmedia {
     display: flex;
     flex-direction: row;
     align-items: center;
