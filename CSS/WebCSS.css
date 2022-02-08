@@ -59,8 +59,13 @@ html, body {
     align-items: center;
 }
 
+.media-item img {
+    height: 24px;
+    width: 24px;
+}
+
 .media-item {
-    margin-right: 36px;
+    margin-right: 12px;
     padding-top: 4px;
 }
 
