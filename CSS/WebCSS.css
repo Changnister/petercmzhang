@@ -46,6 +46,22 @@ html, body {
     font-weight: 900;
     letter-spacing: 1px;
     margin-right: 36px;
+    padding: 15px;
+}
+
+.nav-item a {
+    padding: 15px;
+}
+
+.nav-item:hover {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-right: 36px;
+    background-color:rgb(222, 222, 222);
+    padding: 15px;
 }
 
 .nav {
@@ -82,40 +98,56 @@ html, body {
     margin: 0 36px;
 }
 
-.body-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 800px;
-}
-
 .introduction-item {
-    font-size: 48px;
+    font-size: 24px;
     color: black;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: 0px;
-    width: 55%;
+    margin-top: 35px;
 }
 
 .blurb-item {
     font-size: 16px;
     line-height: 28px;
     color: black;
-    text-align: left;
+    text-align: center;
     letter-spacing: 1px;
-    width: 55%;
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.column-head {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+
+.column-item {
+    font-size: 16px;
+    line-height: 28px;
+    color: black;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .cv-item {
-    display: inline-block;
+    margin-left: 46%;
+    margin-top: 30px;
+    margin-bottom: 26px;
     width: fit-content;
     padding: 11px;
-    background-color: #7438ff;
-    border-color: #7438ff;
+    background-color: #422057FF;
+    border-color: #422057FF;
     border-radius: 6px;
     text-align: center;
 }
@@ -125,7 +157,7 @@ html, body {
     font-weight: 500;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #ffffff;
+    color: white;
 }
 
 .heroimage-container {
@@ -143,12 +175,32 @@ html, body {
     height: 100%;
 }
 
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding-bottom: 35px;
+    padding-top: 10px;
+}
+
+.row {
+    padding-top: 25px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .footer-container {
     display: flex;
     width: 100%;
     flex-direction: row;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 2%;
     flex: 1;
 }
 
