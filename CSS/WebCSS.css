@@ -95,7 +95,6 @@ html, body {
     flex-direction: row;
     justify-content: center;
     width: auto;
-    margin: 0 36px;
 }
 
 .introduction-item {
@@ -117,10 +116,19 @@ html, body {
     margin-top: 16px;
     margin-left: 35%;
     margin-right: 35%;
+    margin-bottom: 5%;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding-bottom: 35px;
+    padding-top: 10px;
 }
 
 .column-head {
-    font-size: 24px;
+    font-size: 18px;
     color: black;
     text-align: center;
     font-weight: bold;
@@ -130,7 +138,7 @@ html, body {
 }
 
 .column-item {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 28px;
     color: black;
     text-align: center;
@@ -140,24 +148,13 @@ html, body {
     margin-right: 50px;
 }
 
-.cv-item {
-    margin-left: 46%;
-    margin-top: 30px;
-    margin-bottom: 26px;
-    width: fit-content;
-    padding: 11px;
-    background-color: #422057FF;
-    border-color: #422057FF;
-    border-radius: 6px;
-    text-align: center;
+.columnicon-item img {
+    height: 100px;
+    width: 100px;
 }
 
-.cv-item a {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: white;
+.columnicon-item {
+    padding-top: 35px;
 }
 
 .heroimage-container {
@@ -175,16 +172,8 @@ html, body {
     height: 100%;
 }
 
-.column {
-    float: left;
-    width: 33.33%;
-    text-align: center;
-    padding-bottom: 35px;
-    padding-top: 10px;
-}
-
 .row {
-    padding-top: 25px;
+    padding-top: 40px;
     padding-left: 75px;
     padding-right: 75px;
 }
@@ -217,10 +206,6 @@ html, body {
     width: 100%;
     flex-direction: column;
     justify-content: center;
-}
-
-.list-image {
-    margin: 16px 72px;
 }
 
 .list-image > img {
@@ -272,7 +257,7 @@ html, body {
     display: none;
 }
 
-.topnav-icon {
+.hamburger {
     display: none;
 }
 
@@ -285,8 +270,29 @@ html, body {
         margin: 0;
     }
 
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        width: auto;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    
+    .header-container a {
+        text-decoration: none;
+        color: black;
+    }
+
     .header-item {
-        display: none;
+        font-size: 16px;
+        color: black;
+        text-align: left;
+        font-weight: 900;
+        letter-spacing: 3px;
+        padding-left: 15px;
+        float: left;
     }
 
     .socialmedia {
@@ -294,26 +300,96 @@ html, body {
     }
 
     .nav {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
         flex-direction: column;
+        background-color: #fff;
         width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-item {
+        margin-right: 0;
+    }
+
+    .nav.active {
+        left: 0;
     }
     
-    .nav-item {
-        width: 100%;
-        text-align: center;
-        font-size: 16px;
-        padding-bottom: 5px;
-        padding-top: 5px;
-        margin: 0;
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-right: 15px;
     }
 
-    .nav-item:first-child{
-        padding-top: 15px;
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
     }
 
-    .nav-item:last-child {
-        padding-bottom: 15px;
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
     }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #101010;
+    }
+
+.row {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+ 
+.column {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.column-head {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    margin-top: 35px;
+}
+
+.column-item {
+    font-size: 14px;
+    line-height: 28px;
+    color: black;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.columnicon-item img {
+    height: 50px;
+    width: 50px;
+}
+
+.columnicon-item {
+    padding-top: 35px;
+}
+
 
     .home-container {
         margin: 0;
@@ -339,7 +415,10 @@ html, body {
 
     .list-image {
         margin: 0;
-        margin-bottom: 20px;
+    }
+
+    .list-introduction {
+        margin-top: 20px;
     }
 
     .introduction-item {
@@ -350,18 +429,8 @@ html, body {
         margin-top: 20px;
     }
 
-    .blurb-item {
-        margin: 16px 24px;
-        text-align: center;
-        width: auto;
-        margin-bottom: 36px;
-    }
-
-    .heroimage-item {
-        display: none;
-    }
-
     .footer-item {
         font-size: 10px;
+        padding-top: 25px;
     }
 }
