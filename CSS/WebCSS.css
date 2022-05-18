@@ -336,9 +336,14 @@ html, body {
         background-color: #101010;
     }
 
+    .list-image {
+        margin: 0;
+        height: 200px;
+    }
+
     .list-image > img {
-        width: 100%;
-        height: 115%;
+        object-fit: cover;
+        height: 100%;
     }
 
 .row {
