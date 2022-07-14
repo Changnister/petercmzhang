@@ -16,6 +16,13 @@ html, body {
     height: 100%;
 }
 
+.vitae-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+}
+
 .header-container {
     display: flex;
     flex-direction: row;
@@ -308,6 +315,15 @@ html, body {
 
     .nav.active {
         left: 0;
+    }
+
+    .vitae-container {
+        margin-top: 5%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
     }
     
     .hamburger {
