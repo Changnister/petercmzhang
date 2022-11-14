@@ -176,6 +176,18 @@ html, body {
     padding-top: 10px;
 }
 
+.halfcolumnproject {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.contributions{
+    background-color: #F5F5F5;
+    padding: 5px;
+    display: flex;
+}
+
 .row {
     padding-top: 40px;
     padding-left: 75px;
@@ -245,7 +257,7 @@ html, body {
 }
 
 .list-items p:nth-child(2) {
-    color:#808080;
+    color:#696969;
 }
 
 .list-items a {
