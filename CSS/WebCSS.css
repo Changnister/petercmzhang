@@ -176,15 +176,94 @@ html, body {
     padding-top: 10px;
 }
 
-.halfcolumnproject {
+.halfcolumnprojecttext {
     float: left;
+    flex-direction: column;
     width: 50%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.halfcolumnproject {
+    float: left;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.project-introduction {
+    font-size: 24px;
+    color: black;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-left: 11%;
+    margin-top: 2%;
+    margin-bottom: 8px;
+}
+
+.list-projectsshape {
+    margin-left: 11%;
+    margin-right: 20%;
+    margin-bottom: 24px;
+    width: 75%;
+}
+
+.list-projectsblurb {
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-left: 11%;
+    margin-right: 20%;
+    width: 75%;
+}
+
+.list-projectsblurb p:nth-child(2) {
+    color:#696969;
+}
+
+.list-projects {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.list-projects:last-child{
+    margin-bottom: 0%;
+}
+
+.list-projects p {
+  margin:0px;
+}
+
+.list-projects p:nth-child(2) {
+    color:#696969;
+}
+
+.list-projects a {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    text-align: left;
+    letter-spacing: 1px;
+    text-decoration: none;
 }
 
 .contributions{
     background-color: #F5F5F5;
-    padding: 5px;
     display: flex;
 }
 
