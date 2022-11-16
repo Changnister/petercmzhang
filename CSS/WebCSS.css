@@ -482,11 +482,23 @@ html, body {
         height: 100%;
     }
 
-.row {
+    .halfcolumnproject {
+        display: none;
+    }
+
+    .halfcolumnprojecttext {
+        width: 100%;
+    }
+
+    .project-introduction {
+        margin-top: 24px;
+    }
+
+    .row {
     display: flex;
     flex-direction: column;
     padding-top: 0;
-}
+    }
  
 .column {
     float: left;
