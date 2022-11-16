@@ -482,12 +482,24 @@ html, body {
         height: 100%;
     }
 
-    .halfcolumnproject {
-        display: none;
+    .list-projectsshape {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contributions {
+        display: flex;
+        flex-direction: column;
     }
 
     .halfcolumnprojecttext {
+        order: 1;
+        width: 75%;
+    }
+
+    .halfcolumnproject {
         width: 100%;
+        order: 2;
     }
 
     .project-introduction {
