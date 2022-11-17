@@ -179,7 +179,6 @@ html, body {
 .halfcolumnprojecttext {
     float: left;
     flex-direction: column;
-    width: 50%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -188,15 +187,18 @@ html, body {
     line-height: 24px;
     color: black;
     letter-spacing: 1px;
+    order: 1;
+    width: 75%;
 }
 
 .halfcolumnproject {
     float: left;
     flex-direction: column;
-    width: 50%;
     text-align: center;
     display: flex;
     justify-content: center;
+    width: 100%;
+    order: 2;
 }
 
 .project-introduction {
@@ -215,6 +217,8 @@ html, body {
     margin-right: 20%;
     margin-bottom: 24px;
     width: 75%;
+    display: flex;
+        flex-direction: column;
 }
 
 .list-projectsblurb {
@@ -265,6 +269,7 @@ html, body {
 .contributions{
     background-color: #F5F5F5;
     display: flex;
+        flex-direction: column;
 }
 
 .row {
@@ -480,26 +485,6 @@ html, body {
     .list-image > img {
         object-fit: cover;
         height: 100%;
-    }
-
-    .list-projectsshape {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contributions {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .halfcolumnprojecttext {
-        order: 1;
-        width: 75%;
-    }
-
-    .halfcolumnproject {
-        width: 100%;
-        order: 2;
     }
 
     .project-introduction {
