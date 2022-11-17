@@ -535,6 +535,10 @@ html, body {
     padding-top: 35px;
 }
 
+.halfcolumnprojecttext {
+    width: 75%;
+}
+
 
     .home-container {
         margin: 0;
