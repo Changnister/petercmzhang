@@ -201,6 +201,13 @@ html, body {
     order: 1;
 }
 
+.halfcolumnprojectphoto {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    order: 1;
+}
+
 .project-introduction {
     font-size: 24px;
     color: black;
