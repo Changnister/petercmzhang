@@ -503,6 +503,12 @@ html, body {
     flex-direction: column;
     padding-top: 0;
     }
+
+    .mobilerow {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20%;
+    }
  
 .column {
     float: left;
