@@ -1,120 +1,88 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Peter Zhang</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Zhang</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/WebCSS.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&;900display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/WebCSS.css">
-        <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta name="title" property="og:title" content="Peter Zhang">
-        <meta name="description" property="og:description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
-        <meta property="og:type" content="Website">
-        <meta name="image" property="og:image" content="Images/Linkpopup.png">
-
+    <meta name="title" content="Peter Zhang">
+    <meta name="description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Images/Linkpopup.png">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header-container">
+            <div class="header-item">
+                <a href="index.html">PETER ZHANG</a>
+            </div>
+            <nav class="nav">
+                <div class="nav-item"><a href="index.html">Home</a></div>
+                <div class="nav-item"><a href="features.html">Features</a></div>
+                <div class="nav-item"><a href="publications.html">Publications</a></div>
+                <div class="nav-item"><a href="vitae.html">Vitae</a></div>
+            </nav>
+            <div class="socialmedia">
+                <div class="media-item">
+                    <a href="https://www.linkedin.com/in/peterczhang/">
+                        <img src="Images/LinkedIn.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </header>
+        
+        <main class="home-container">
+            <section class="webhome">
+                <div class="body-container">
+                    <div class="halfcolumn">
+                        <h1 class="homeitemleft">Welcome</h1>
+                        <p class="blurb-item">I write about healthcare, strategy, and technology. Here are some of my works.</p>
+                    </div>
+                    <div class="halfcolumn">
+                        <div class="heroimage-container">
+                            <img src="Images/Headshot.jpg" alt="Peter Zhang Headshot" class="heroimage-item" style="width:60%; height:60%; padding-top:10%;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mobilehome">
+                <div class="list-container">
+                    <div class="list-image">
+                        <img src="Images/Homephoto.jpg" alt="Home background" style="opacity: 0.9; filter: brightness(80%);">
+                    </div>
+                    <div class="mobilerow">
+                        <div class="column"> 
+                            <h2 class="column-head">Welcome</h2>
+                            <p class="column-item">I write about healthcare, strategy, and technology. Here are some of my works.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer-container">
+            <p class="footer-item">&copy; <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="navresponsive.js" async></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-V41Z66KFZF');
     </script>
-    </head>
-
-    <body> 
-
-    <div class="page-container">
-        <div class="header-container">
-            <div class ="header-item">
-                <a href='index.html'>PETER ZHANG</a>
-            </div>
-
-            <div class="nav">
-                <div class ="nav-item">
-                    <a href='index.html'>Home</a>
-                </div>
-                <div class ="nav-item">
-                    <a href='features.html'>Features</a>
-                </div>
-                <div class ="nav-item">
-                    <a href='publications.html'>Publications</a>
-                </div>
-                <div class ="nav-item">
-                    <a href="vitae.html">Vitae</a>
-                </div>
-                <div class ="nav-item">
-                    <a href="projects.html">Projects</a>
-                </div>
-            </div>
-
-            <div class="socialmedia">
-                <div class ="media-item">
-                    <a href="https://www.linkedin.com/in/peterczhang/"> <img src="Images/LinkedIn.png"></a>
-                </div>
-            </div>
-        
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-
-            <script src="navresponsive.js"></script>
-            
-        </div>
-        
-        <div class ="home-container">
-                <div class="webhome">
-                <div class="body-container">
-                    <div class="halfcolumn">
-                    <div class ="homeitemleft">
-                        <p> Welcome </p>
-                    </div>
-                    <div class ="blurb-item">
-                        <p> I write about healthcare, strategy, and technology. Here are some of my works. </p>
-                    </div>
-                    </div>
-                
-                <div class="halfcolumn">
-                <div class="heroimage-container">
-                    <div class="heroimage-item">
-                        <img src="Images/Headshot.jpg" style="width:60%;height:60%;padding-top:10%;">
-                    </div>
-                </div>
-                </div>
-                </div>
-        </div>
-    </div>
-
-    <div class="mobilehome">
-        <div class ="home-container">
-            <div class="list-container">
-                <div class="list-image">
-                    <img src="Images/Homephoto.jpg" style="opacity: 0.9;filter: brightness(80%);">
-                </div>
-        
-        <div class='mobilerow'>
-            <div class='column'> 
-                <div class="column-head"> Welcome </div>
-                <div class="column-item">I write about healthcare, strategy, and technology. Here are some of my works. </div>
-            </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    
-        <div class=footer-container>
-            <div class=footer-item>
-                <p>
-                    ©
-                    <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang.  All rights reserved.
-                </p>
-            </div>
-        </div>
-    </div>
-        </body>
+</body>
 </html>
