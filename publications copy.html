@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Peter Zhang | Publications </title>
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="CSS/WebCSS.css">
+        <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="title" property="og:title" content="Peter Zhang">
+        <meta name="description" property="og:description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
+        <meta property="og:type" content="Website">
+        <meta name="image" property="og:image" content="Images/Linkpopup.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V41Z66KFZF');
+    </script>
+    
+    <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+	        .container {
+	            display: flex;
+	            flex-wrap: wrap;
+	            justify-content: space-between;
+                line-height: 24px;
+                color: black;
+                text-align: left;
+                letter-spacing: 1px;
+                margin-left: 11%;
+                margin-right: 20%;
+                margin-bottom: 24px;
+                width: 75%;
+	        }
+
+	        .column {
+	            background-color: white;
+	            box-sizing: border-box;
+	            width: calc(33.333% - 20px);
+                padding-bottom: 10px;
+	        }
+  
+            select {
+                display: flex;
+                width: 75%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: 10.65%;
+                margin-right: 10%;
+                border: none;
+                font-size: 14px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            input[type=text] {
+                display: flex;
+                width: 75%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: 10.85%;
+                margin-right: 10%;
+                border: none;
+                font-size: 14px;
+                font-family: 'Roboto', sans-serif;
+                margin-top: 30px;
+            }
+
+            input[type=text]:focus {
+            outline:none;
+            }
+
+        a:link {
+            text-decoration: none;
+        }
+
+	        /* Mobile Layout */
+	        @media screen and (max-width: 768px) {
+	            .column {
+	                width: 100%; /* Make columns full width on mobile */
+	            }
+
+                select {
+                margin-left: 10.9%;
+            }
+
+                input[type=text] {
+                margin-left: 11.3%;
+            }
+	        }
+    </style>
+
+    </head>
+
+    <body> 
+
+        <div class="page-container">
+            <div class="header-container">
+                <div class ="header-item">
+                    <a href='index.html'>PETER ZHANG</a>
+                </div>
+    
+                <div class="nav">
+                    <div class ="nav-item">
+                        <a href='index.html'>Home</a>
+                    </div>
+                    <div class ="nav-item">
+                        <a href='features.html'>Features</a>
+                    </div>
+                    <div class ="nav-item">
+                        <a href='publications.html'>Publications</a>
+                    </div>
+                    <div class ="nav-item">
+                        <a href="vitae.html">Vitae</a>
+                    </div>
+                </div>
+    
+                <div class="socialmedia">
+                    <div class ="media-item">
+                        <a href="https://www.linkedin.com/in/peterczhang/"> <img src="Images/LinkedIn.png"></a>
+                    </div>
+                    <div class ="media-item">
+                        <a href="https://www.instagram.com/petercmzhang/"> <img src="Images/Instagram.png"></a>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    </div>
+    
+                <script src="navresponsive.js"></script>
+
+            </div>    
+        
+        <div class ="home-container">
+            <div class="list-container">
+                <div class="list-image">
+                    <img src="Images/Writingcover.jpg">
+                </div>
+
+                  <input type="text" id="searchInput" placeholder="Search" onkeyup="filterAndSortArticles()"/>
+
+        <select id="sortOrder" onchange="filterAndSortArticles()">
+            <option value="newest">Sort by Latest</option>
+            <option value="oldest">Sort by Earliest</option>
+        </select>
+                <div class='list-introduction'>
+                    Scholarly
+                </div>
+
+                <div class="container" id="articleList">
+        </div>
+                <script>
+                     const articlesData = [
+                     {
+                        date: "December 23, 2024",
+                        title: "RAG in Health Care: A Novel Framework for Improving Communication and Decision-Making by Addressing LLM Limitations",
+                        authors: "Ng, K. K. Y., Matsuba, I., & Zhang, P. C.",
+                        journal: "NEJM AI",
+                        volume: "2(1)",
+                        doi: "10.1056/AIra2400380",
+                        url: "https://ai.nejm.org/doi/full/10.1056/AIra2400380",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg",  
+                        tag: "featured",
+                        tag: "healthcare", 
+                        tag: "technology",     
+                    },
+                        {
+                        date: "March 4, 2024",
+                        title: "To maximise impact, hospital pharmacists need to increase visibility",
+                        authors: "Zhang, P. C., Matinnia, C., & Austin, Z.",
+                        journal: "European Journal of Hospital Pharmacy",
+                        volume: "31(3)",
+                        doi: "10.1136/ejhpharm-2024-004137",
+                        url: "https://ejhp.bmj.com/content/31/3/185",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg",  
+                        tag: "healthcare", 
+                        tag: "pharmacy",     
+                    },
+                    {
+                        date: "December 1, 2023",
+                        title: "Advancing medical affair capabilities and insight generation through machine learning techniques",
+                        authors: "Ng, K.K.Y., Zhang, P.C.",
+                        journal: "Journal of Pharmaceutical Policy and Practice",
+                        volume: "165(16)",
+                        doi: "10.1186/s40545-023-00670-w",
+                        url: "https://joppp.biomedcentral.com/articles/10.1186/s40545-023-00670-w",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg",  
+                        tag: "healthcare", 
+                        tag: "technology",     
+                    },
+                    {
+                        date: "March 27, 2023",
+                        title: "To succeed as health care innovators, pharmacists need to cultivate an entrepreneurial mindset",
+                        authors: "Zhang, P.C., Austin, Z.",
+                        journal: "Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada",
+                        volume: "156(3)",
+                        doi: "10.1177/17151635231164622",
+                        url: "https://journals.sagepub.com/doi/10.1177/17151635231164622",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg",  
+                        tag: "healthcare", 
+                        tag: "pharmacy",     
+                    },
+                    {
+                        date: "October 11, 2022",
+                        title: "Patient Safety from a Pharmacy Perspective",
+                        authors: "Ho, C., Zhang, P.C.",
+                        journal: "Encyclopedia of Evidence in Pharmaceutical Public Health and Health Services Research in Pharmacy",
+                        doi: "10.1007/978-3-030-50247-8_72-1",
+                        url: "https://link.springer.com/referenceworkentry/10.1007/978-3-030-50247-8_72-1",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg",  
+                        tag: "healthcare", 
+                        tag: "pharmacy",
+                    },
+                    {
+                        date: "September 20, 2021",
+                        title: "3D-Printed Personal Protective Face Shields During the COVID-19 Pandemic: A Survey of Canadian Frontline Workers",
+                        authors: "Daud, A., Hussein, I. M., Zhang, P. C., Ahmed, Y., Trac, J., Vujovic, N., Rizvi, S. F., & Kuzyk, P. R.",
+                        journal: "Cureus",
+                        doi: "10.7759/cureus.18141",
+                        url: "https://www.cureus.com/articles/70587-3d-printed-personal-protective-face-shields-during-the-covid-19-pandemic-a-survey-of-canadian-frontline-workers",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg",  
+                        tag: "technology", 
+                        tag: "pharmacy",
+                    },
+                    {
+                        date: "September 20, 2021",
+                        title: "The future of pharmacy is intertwined with digital health innovation",
+                        authors: "Zhang, P. C.",
+                        journal: "Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada",
+                        volume: "155(1)",
+                        doi: "10.1177/17151635211044474",
+                        url: "https://journals.sagepub.com/doi/full/10.1177/17151635211044474",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg",  
+                        tag: "technology", 
+                        tag: "pharmacy",
+                    },
+                    {
+                        date: "April 27, 2021",
+                        title: "Overcoming vaccine deployment challenges among the hardest to reach: lessons from polio elimination in India",
+                        authors: "Bellatin, A., Hyder, A., Rao, S., Zhang, P. C., & Mcgahan, A. M.",
+                        journal: "BMJ Global Health",
+                        volume: "6(4)",
+                        doi: "10.1136/bmjgh-2021-005125",
+                        url: "https://gh.bmj.com/content/6/4/e005125.full",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg",  
+                        tag: "healthcare", 
+                    },
+                    {
+                        date: "November 23, 2020",
+                        title: "Optimization of community-led 3D printing for the production of protective face shields",
+                        authors: "Zhang, P. C., Ahmed, Y., Hussein, I. M., Afenu, E., Feasson, M., & Daud, A.",
+                        journal: "3D Printing in Medicine",
+                        volume: "6(1)",
+                        doi: "10.1186/s41205-020-00089-y",
+                        url: "https://threedmedprint.biomedcentral.com/articles/10.1186/s41205-020-00089-y",
+                        image: "https://gssc.esa.int/navipedia/images/a/a9/Example.jpg", 
+                        tag: "technology", 
+                        tag: "pharmacy", 
+                    }
+                    ];
+
+                    function renderArticles(articles) {
+      const container = document.getElementById("articleList");
+      container.innerHTML = "";
+
+      articles.forEach(article => {
+
+		const column = document.createElement("div");
+        column.classList.add("column");
+
+		const articleContent = `
+                            <img src="${article.image}" style="width: 100%; height: 200px; margin: 0px;">                    
+                            <h4><p><a href=${article.url} target="_blank" style="color: black; margin: 0px;">${article.title}</a></p></h2>
+		                    <p><strong>Published: </strong> ${article.date}</p>
+                            <p><strong>Authors: </strong> ${article.authors}</p>
+		                `;
+
+        column.innerHTML = articleContent;
+
+        container.appendChild(column);
+
+      });
+    }
+
+function filterAndSortArticles() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const sortOrder = document.getElementById('sortOrder').value;
+
+  let filteredArticles = articlesData.filter(article =>
+    article.title.toLowerCase().includes(input)
+  );
+
+  filteredArticles.sort((a, b) => {
+    return sortOrder === 'newest'
+      ? new Date(b.date) - new Date(a.date)
+      : new Date(a.date) - new Date(b.date);
+  });
+
+  renderArticles(filteredArticles);
+}
+
+window.onload = filterAndSortArticles;
+
+                </script>
+            </div>
+        </div>
+
+        <div class=footer-container>
+            <div class=footer-item>
+                <p>
+                    ©
+                    <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang.  All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+        </body>
+</html>
