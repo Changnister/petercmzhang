@@ -51,6 +51,13 @@
 	            width: calc(33.333% - 20px);
                 padding-bottom: 15px;
 	        }
+
+            .columnfilters {
+	            background-color: white;
+	            box-sizing: border-box;
+	            width: calc(33.333% - 20px);
+                padding-bottom: 10px;
+	        }
   
             select {
                 display: flex;
@@ -153,13 +160,14 @@
                     <img src="Images/Writingcover.jpg">
                 </div>
 
-        
+        <div class="columnfilters">
         <input type="text" id="searchInput" placeholder="Search" onkeyup="filterAndSortArticles()"/>
         <select id="sortOrder" onchange="filterAndSortArticles()">
             <option value="newest">Sort by Latest</option>
             <option value="oldest">Sort by Earliest</option>
-
         </select>
+        </div>
+
                 <div class='list-introduction'>
                     Scholarly
                 </div>
@@ -177,9 +185,9 @@
                         doi: "10.1056/AIra2400380",
                         url: "https://ai.nejm.org/doi/full/10.1056/AIra2400380",
                         image: "https://peterczhang.com/Images/NEJM-AI.png",  
-                        tag: "featured",
-                        tag: "healthcare", 
-                        tag: "technology",     
+                        tag: "Featured",
+                        tag: "Healthcare", 
+                        tag: "Technology",     
                     },
                         {
                         date: "March 4, 2024",
@@ -190,8 +198,8 @@
                         doi: "10.1136/ejhpharm-2024-004137",
                         url: "https://ejhp.bmj.com/content/31/3/185",
                         image: "https://peterczhang.com/Images/EJHP.png",  
-                        tag: "healthcare", 
-                        tag: "pharmacy",     
+                        tag: "Healthcare", 
+                        tag: "Pharmacy",     
                     },
                     {
                         date: "December 1, 2023",
@@ -202,8 +210,8 @@
                         doi: "10.1186/s40545-023-00670-w",
                         url: "https://joppp.biomedcentral.com/articles/10.1186/s40545-023-00670-w",
                         image: "https://peterczhang.com/Images/JPPP.png",  
-                        tag: "healthcare", 
-                        tag: "technology",     
+                        tag: "Healthcare", 
+                        tag: "Technology",     
                     },
                     {
                         date: "March 27, 2023",
@@ -214,8 +222,8 @@
                         doi: "10.1177/17151635231164622",
                         url: "https://journals.sagepub.com/doi/10.1177/17151635231164622",
                         image: "https://peterczhang.com/Images/CPJ.jpg",  
-                        tag: "healthcare", 
-                        tag: "pharmacy",     
+                        tag: "Healthcare", 
+                        tag: "Pharmacy",     
                     },
                     {
                         date: "October 11, 2022",
@@ -225,8 +233,8 @@
                         doi: "10.1007/978-3-030-50247-8_72-1",
                         url: "https://link.springer.com/referenceworkentry/10.1007/978-3-030-50247-8_72-1",
                         image: "https://peterczhang.com/Images/Encyclopedia of EPPHSRP.png",  
-                        tag: "healthcare", 
-                        tag: "pharmacy",
+                        tag: "Healthcare", 
+                        tag: "Pharmacy",
                     },
                     {
                         date: "September 20, 2021",
@@ -236,8 +244,8 @@
                         doi: "10.7759/cureus.18141",
                         url: "https://www.cureus.com/articles/70587-3d-printed-personal-protective-face-shields-during-the-covid-19-pandemic-a-survey-of-canadian-frontline-workers",
                         image: "https://peterczhang.com/Images/Cureus.png",  
-                        tag: "technology", 
-                        tag: "pharmacy",
+                        tag: "Technology", 
+                        tag: "Pharmacy",
                     },
                     {
                         date: "September 20, 2021",
@@ -248,8 +256,8 @@
                         doi: "10.1177/17151635211044474",
                         url: "https://journals.sagepub.com/doi/full/10.1177/17151635211044474",
                         image: "https://peterczhang.com/Images/CPJ.jpg",  
-                        tag: "technology", 
-                        tag: "pharmacy",
+                        tag: "Technology", 
+                        tag: "Pharmacy",
                     },
                     {
                         date: "April 27, 2021",
@@ -260,7 +268,7 @@
                         doi: "10.1136/bmjgh-2021-005125",
                         url: "https://gh.bmj.com/content/6/4/e005125.full",
                         image: "https://peterczhang.com/Images/BMJGH.png",  
-                        tag: "healthcare", 
+                        tag: "Healthcare", 
                     },
                     {
                         date: "November 23, 2020",
@@ -271,8 +279,8 @@
                         doi: "10.1186/s41205-020-00089-y",
                         url: "https://threedmedprint.biomedcentral.com/articles/10.1186/s41205-020-00089-y",
                         image: "https://peterczhang.com/Images/3D Printing in Medicine.png", 
-                        tag: "technology", 
-                        tag: "pharmacy", 
+                        tag: "Technology", 
+                        tag: "Pharmacy", 
                     }
                     ];
 
