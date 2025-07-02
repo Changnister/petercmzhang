@@ -6,6 +6,144 @@ html, body {
     width: 100%;
 }
 
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+	        .container {
+	            display: flex;
+	            flex-wrap: wrap;
+	            justify-content: space-between;
+                line-height: 24px;
+                color: black;
+                text-align: left;
+                letter-spacing: 1px;
+                margin-left: 11%;
+                margin-right: 11%;
+                margin-bottom: 24px;
+                width: 75%;
+	        }
+
+	        .column {
+	            background-color: white;
+	            box-sizing: border-box;
+	            width: calc(33.333% - 20px);
+                padding-bottom: 15px;
+	        }
+
+            .columnfilters {
+	            background-color: white;
+	            box-sizing: border-box;
+	            width: calc(33.333% - 20px);
+                padding-bottom: 10px;
+	        }
+  
+                       select {
+                display: flex;
+                width: 75%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: 10.65%;
+                margin-right: 10%;
+                border: none;
+                font-size: 14px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            input[type=text] {
+                display: flex;
+                width: 75%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-left: 10.85%;
+                margin-right: 10%;
+                border: none;
+                font-size: 14px;
+                font-family: 'Roboto', sans-serif;
+                margin-top: 30px;
+            }
+
+            input[type=text]:focus {
+            outline:none;
+            }
+
+        a:link {
+            text-decoration: none;
+        }
+
+	        @media screen and (max-width: 768px) {
+	            .column {
+	                width: 100%; /* Make columns full width on mobile */
+	            }
+
+                select {
+                margin-left: 10.9%;
+            }
+
+                input[type=text] {
+                margin-left: 11.3%;
+            }
+	        }
+
+            .filters-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 11%;
+        margin-right: 11%;
+        width: 75%;
+        border-radius: 10px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        gap: 12px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .filter-col {
+        width: calc(33.333% - 12px);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    .filter-col input,
+    .filter-col select {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        border: 1px solid #d1d1e0;
+        border-radius: 6px;
+        padding: 10px 12px;
+        margin: 0;
+        background: #fff;
+        color: #222;
+        transition: border 0.2s;
+    }
+    .filter-col input:focus,
+    .filter-col select:focus {
+        border: 1.5px solid #2d2564;
+        outline: none;
+        background: #f0f0fa;
+    }
+    @media screen and (max-width: 900px) {
+        .filters-row {
+            flex-direction: column;
+            width: 92%;
+            margin-left: 2%;
+            margin-right: 2%;
+            padding: 14px 6px 8px 6px;
+        }
+        .filter-col {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+	        }
+
 .page-container {
     display: flex;
     flex-direction: column;
