@@ -1,91 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter Zhang</title>
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/WebCSS.css">
-    <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png">
+<html>
+    <head>
+        <title> Peter Zhang </title>
 
-    <meta name="title" content="Peter Zhang">
-    <meta name="description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="Images/Linkpopup.png">
-</head>
-<body>
-    <div class="page-container">
-        <header class="header-container">
-            <div class="header-item">
-                <a href="index.html">PETER ZHANG</a>
-            </div>
-            <nav class="nav">
-                <div class="nav-item"><a href="index.html">Home</a></div>
-                <div class="nav-item"><a href="features.html">Features</a></div>
-                <div class="nav-item"><a href="publications.html">Publications</a></div>
-                <div class="nav-item"><a href="vitae.html">Vitae</a></div>
-            </nav>
-            <div class="socialmedia">
-                <div class="media-item">
-                    <a href="https://www.linkedin.com/in/peterczhang/">
-                        <img src="Images/LinkedIn.png" alt="LinkedIn">
-                    </a>
-                </div>
-                <div class ="media-item">
-                    <a href="https://www.instagram.com/petercmzhang/"> <img src="Images/Instagram.png"></a>
-                </div>
-            </div>
-            <div class="hamburger" id="hamburger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </header>
-        
-        <main class="home-container">
-            <section class="webhome">
-                <div class="body-container">
-                    <div class="halfcolumn">
-                        <h1 class="homeitemleft">Welcome</h1>
-                        <p class="blurb-item">I write about healthcare, strategy, and technology. Here are some of my works.</p>
-                    </div>
-                    <div class="halfcolumn">
-                        <div class="heroimage-container">
-                            <img src="Images/Headshot.jpg" alt="Peter Zhang Headshot" class="heroimage-item" style="width:60%; height:60%; padding-top:10%;">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="mobilehome">
-                <div class="list-container">
-                    <div class="list-image">
-                        <img src="Images/Homephoto.jpg" alt="Home background" style="opacity: 0.9; filter: brightness(80%);">
-                    </div>
-                    <div class="mobilerow">
-                        <div class="column"> 
-                            <h2 class="column-head">Welcome</h2>
-                            <p class="column-item">I write about healthcare, strategy, and technology. Here are some of my works.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        
-        <footer class="footer-container">
-            <p class="footer-item">&copy; <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang. All rights reserved.</p>
-        </footer>
-    </div>
-    
-    <script src="navresponsive.js" async></script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="CSS/WebCSS.css">
+        <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="title" property="og:title" content="Peter Zhang">
+        <meta name="description" property="og:description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
+        <meta property="og:type" content="Website">
+        <meta name="image" property="og:image" content="Images/Linkpopup.png">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-V41Z66KFZF');
     </script>
-</body>
+
+    </head>
+
+    <body> 
+
+        <div class="page-container">
+            <div class="header-container">
+                <div class ="header-item">
+                    <a href='index.html'>PETER ZHANG</a>
+                </div>
+    
+                 <div class="nav">
+                    <div class ="nav-item">
+                        <a href='index.html'>Home</a>
+                    </div>
+                    <div class ="nav-item">
+                        <a href="publications.html">Publications</a>
+                    </div>
+                    <div class ="nav-item">
+                        <a href='scholarly.html'>Scholarly</a>
+                    </div>
+                    <div class ="nav-item">
+                        <a href='media.html'>Media</a>
+                    </div>
+                </div>
+    
+                <div class="socialmedia">
+                    <div class ="media-item">
+                        <a href="https://www.linkedin.com/in/peterczhang/"> <img src="Images/LinkedIn.png"></a>
+                    </div>
+                    <div class ="media-item">
+                        <a href="https://www.instagram.com/petercmzhang/"> <img src="Images/Instagram.png"></a>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    </div>
+    
+                <script src="navresponsive.js"></script>
+
+            </div>    
+        
+        <div class ="home-container">
+            <div class="list-container">
+                <div class="list-image">
+                    <img src="Images/homecover.jpg">
+                </div>
+
+                <div class="hero-blurb">
+                    <p>Peter is a hospital pharmacist, technology professional, and PhD student at the University of Toronto. His works have appeared in research journals and in national news outlets such as the Toronto Star, the Globe and Mail, and the National Post. </p>
+                    <a href="vitae.html" class="hero-blurb-btn">CV</a>
+                </div>
+
+             <div class="filters-row">
+    <div class="filter-col">
+        <input type="text" id="searchInput" placeholder="Search" onkeyup="filterAndSortArticles()"/>
+    </div>
+    <div class="filter-col">
+        <select id="sortOrder" onchange="filterAndSortArticles()">
+            <option value="newest">Sort by Latest</option>
+            <option value="oldest">Sort by Earliest</option>
+        </select>
+    </div>
+    <div class="filter-col">
+        <select id="tagFilter" onchange="filterAndSortArticles()">
+            <option value="all">Featured</option>
+            <option value="Healthcare">Featured</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Pharmacy">Pharmacy</option>
+            <option value="Technology">Technology</option>
+        </select>
+    </div>
+</div>
+                <div class="container" id="articleList"></div>
+                <script>
+const articlesData = [
+
+    {
+        date: "May 5, 2024",
+        title: "British Columbia found the key to attracting more family doctors, Ontario should do the same",
+        authors: "Co-authors: Laxsanaa Sivanthan, MD & Avital Pitkis, MD",
+        journal: "Toronto Star",
+        url: "https://www.thestar.com/opinion/contributors/british-columbia-found-the-key-to-attracting-more-family-doctors-ontario-should-do-the-same/article_6d68de6a-095a-11ef-afc7-13fcee64fcb4.html",
+        image: "Images/britishcolumbiafound.jpg",
+        tag: ["Healthcare", "Featured"]
+    },
+    {
+        date: "September 1, 2023",
+        title: "Clearing the air: fighting for a breathable future",
+        authors: "Co-authors: Sudarshan Bala, MD & Gillian Goobie, MD, PhD",
+        journal: "Toronto Star",
+        url: "https://www.thestar.com/opinion/contributors/clearing-the-air-fighting-for-a-breathable-future/article_251e8f4a-c8c3-5b9e-9447-31eaacbead2d.html",
+        image: "Images/clearingtheair.jpg",
+        tag: ["Healthcare", "Featured"]
+    },
+    {
+        date: "March 22, 2023",
+        title: "Modernized home care can help stabilize health costs",
+        authors: "Co-author: Dr. Anser Daud, MD",
+        journal: "Globe and Mail",
+        url: "https://www.theglobeandmail.com/opinion/article-modernized-home-care-can-help-stabilize-health-costs/",
+        image: "Images/modernizedhomecare.jpg",
+        tag: ["Healthcare", "Featured"]
+    },
+    {
+        date: "March 5, 2023",
+        title: "Overcoming language barriers key to providing health-care",
+        authors: "Co-author: Dr. Avinash Pandey, MD",
+        journal: "Toronto Star",
+        url: "https://www.thestar.com/opinion/contributors/2023/03/05/overcoming-language-barriers-key-to-providing-health-care.html",
+        image: "Images/overcominglanguagebarriers.jpg",
+        tag: ["Healthcare","Featured"]
+    },
+    {
+        date: "November 21, 2022",
+        title: "Ask a pharmacist before you split tablets for your children",
+        authors: "",
+        journal: "Toronto Star",
+        url: "https://www.thestar.com/opinion/contributors/2022/11/21/ask-a-pharmacist-before-you-split-tablets-for-your-children.html",
+        image: "Images/askyapharmacistbefore.jpg",
+        tag: ["Pharmacy", "Healthcare","Featured"]
+    },
+    {
+        date: "May 31, 2022",
+        title: "How pharmacist prescribing can alleviate health-care system pressures",
+        authors: "Co-author: Dr. Mina Tadrous, PharmD, PhD",
+        journal: "Policy Options",
+        url: "https://policyoptions.irpp.org/magazines/may-2022/pharmacists-prescribing-savings/",
+        image: "Images/howpharmacistprescribingcanalleviate.jpg",
+        tag: ["Pharmacy", "Healthcare","Featured"]
+    },
+    {
+        date: "November 15, 2021",
+        title: "The dangers of antimicrobial drug resistance must not be ignored",
+        authors: "Co-author: Abrar Ahmed",
+        journal: "Healthy Debate & National Post",
+        url: "https://nationalpost.com/wellness/science/the-dangers-of-antimicrobial-drug-resistance-must-not-be-ignored/wcm/2c79c9b2-6e06-4db3-8d07-fec5e8cf21d7/amp/",
+        image: "Images/thedangersofantimicrobialdrug.jpg",
+        tag: ["Healthcare", "Featured"]
+    },
+        {
+        date: "October 4, 2020",
+        title: "Naloxone needs to be in hands of as many people as possible",
+        authors: "",
+        journal: "Windsor Star",
+        url: "https://windsorstar.com/opinion/letters/guest-column-naloxone-needs-to-be-in-hands-of-as-many-people-as-possible",
+        image: "Images/naloxoneneeds.jpg",
+        tag: ["Healthcare", "Featured"]
+    },
+     {
+        date: "August 28, 2020",
+        title: "It’s time to normalize suicide prevention training at the workplace",
+        authors: "",
+        journal: "Toronto Star",
+        url: "https://www.thestar.com/opinion/contributors/2020/08/27/its-time-to-normalize-suicide-prevention-training-at-the-workplace.html",
+        image: "Images/itstimetonormalize.jpg",
+        tag: ["Healthcare", "Featured"]
+    },
+];
+                    function renderArticles(articles) {
+    const container = document.getElementById("articleList");
+    container.innerHTML = "";
+
+    articles.forEach(article => {
+        const column = document.createElement("div");
+        column.classList.add("column");
+
+        // Use a default image if none provided
+        const imgSrc = article.image || "Images/Writingcover.jpg";
+
+        column.innerHTML = `
+            <a href="${article.url}" target="_blank" style="text-decoration:none;">
+                <img src="${imgSrc}" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                <h4 style="margin: 8px 0 4px 0; color: black;">${article.title}</h4>
+            </a>
+            <p style="margin: 0 0 4px 0;"> ${article.date}</p>
+            <p style="margin: 0 0 4px 0;"> ${article.authors}</p>
+            ${article.journal ? `<p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">${article.journal}</p>` : ""}
+        `;
+        container.appendChild(column);
+    });
+}
+
+function filterAndSortArticles() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const sortOrder = document.getElementById('sortOrder').value;
+    const tag = document.getElementById('tagFilter').value;
+
+    let filteredArticles = articlesData.filter(article =>
+        (article.title && article.title.toLowerCase().includes(input)) ||
+        (article.authors && article.authors.toLowerCase().includes(input)) ||
+        (article.journal && article.journal.toLowerCase().includes(input))
+    );
+
+    // Proper tag filtering
+    if (tag !== "all") {
+        filteredArticles = filteredArticles.filter(article =>
+            Array.isArray(article.tag) && article.tag.includes(tag)
+        );
+    }
+
+    filteredArticles.sort((a, b) => {
+        return sortOrder === 'newest'
+            ? new Date(b.date) - new Date(a.date)
+            : new Date(a.date) - new Date(b.date);
+    });
+
+    renderArticles(filteredArticles);
+}
+
+window.onload = filterAndSortArticles;
+                </script>
+            </div>
+        </div>
+
+        <div class=footer-container>
+            <div class=footer-item>
+                <p>
+                    ©
+                    <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang.  All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+        </body>
 </html>

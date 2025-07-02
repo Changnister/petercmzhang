@@ -715,3 +715,72 @@ html, body {
         padding-top: 25px;
     }
 }
+
+/* Add to your CSS file */
+.hero-blurb {
+    margin: 24px 0 24px 0;
+    padding: 48px 8% 40px 8%;         /* Larger, even padding */
+    border-radius: 14px;              /* Slightly more rounded */
+
+    text-align: center;
+    max-width: 900px;                 /* Prevents it from being too wide on large screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-blurb h1 {
+    font-size: 2.2rem;                /* Slightly larger headline */
+    margin-bottom: 20px;
+    color: #232946;                   /* Professional, dark blue */
+    font-weight: 800;                 /* Stronger weight */
+    letter-spacing: 1px;
+    line-height: 1.15;
+}
+
+.hero-blurb p {
+    font-size: 1.15rem;
+    color: #333;
+    margin: 0 auto 18px auto;
+    max-width: 700px;                 /* Keeps text line length readable */
+    line-height: 1.7;
+    font-weight: 400;
+    text-align: left;
+}
+
+.hero-blurb em {
+    font-style: italic;
+    color: #2d2564;
+}
+
+.hero-blurb-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 32px;
+    background: #232946;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(35,41,70,0.08);
+}
+.hero-blurb-btn:hover {
+    background: #444b6e;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(35,41,70,0.12);
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .hero-blurb {
+        padding: 24px 2% 24px 2%;
+    }
+    .hero-blurb h1 {
+        font-size: 1.4rem;
+    }
+    .hero-blurb p {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
