@@ -3,6 +3,7 @@
     <head>
         <title>Peter Zhang</title>
 
+        <!-- Google Fonts and CSS -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&;900display=swap" rel="stylesheet">
         <link rel="stylesheet" href="CSS/WebCSS.css">
@@ -10,77 +11,87 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Open Graph Meta Tags -->
         <meta name="title" property="og:title" content="Peter Zhang">
         <meta name="description" property="og:description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
         <meta property="og:type" content="Website">
         <meta name="image" property="og:image" content="Images/Linkpopup.png">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-V41Z66KFZF');
-    </script>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-V41Z66KFZF');
+        </script>
     </head>
 
-    <body> 
+    <body>
+        <div class="page-container">
+            <!-- Header Section -->
+            <div class="header-container">
+                <div class="header-item">
+                    <a href='index.html'>PETER ZHANG</a>
+                </div>
 
-    <div class="page-container">
-        <div class="header-container">
-            <div class ="header-item">
-                <a href='index.html'>PETER ZHANG</a>
-            </div>
-
-               <div class="nav">
-                    <div class ="nav-item">
+                <!-- Navigation Bar -->
+                <div class="nav">
+                    <div class="nav-item">
                         <a href='index.html'>Home</a>
                     </div>
-                    <div class ="nav-item">
+                    <div class="nav-item">
                         <a href="publications.html">Publications</a>
                     </div>
-                    <div class ="nav-item">
+                    <div class="nav-item">
                         <a href='scholarly.html'>Scholarly</a>
                     </div>
-                    <div class ="nav-item">
+                    <div class="nav-item">
                         <a href='media.html'>Media</a>
                     </div>
                 </div>
                 
-            <div class="socialmedia">
-                <div class ="media-item">
-                    <a href="https://www.linkedin.com/in/peterczhang/"> <img src="Images/LinkedIn.png"></a>
+                <!-- Social Media Links -->
+                <div class="socialmedia">
+                    <div class="media-item">
+                        <a href="https://www.linkedin.com/in/peterczhang/">
+                            <img src="Images/LinkedIn.png">
+                        </a>
+                    </div>
+                    <div class="media-item">
+                        <a href="https://www.instagram.com/petercmzhang/">
+                            <img src="Images/Instagram.png">
+                        </a>
+                    </div>
                 </div>
-                <div class ="media-item">
-                    <a href="https://www.instagram.com/petercmzhang/"> <img src="Images/Instagram.png"></a>
-                </div>
-            </div>
         
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+                <!-- Hamburger Menu for Responsive Navigation -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
 
-            <script src="navresponsive.js"></script>
+                <!-- Responsive Navigation Script -->
+                <script src="navresponsive.js"></script>
+            </div>
             
-        </div>
+            <!-- Main Content: Embedded PDF CV -->
+            <div class="vitae-container">
+                <object data="files/CV.pdf" type="application/pdf" class="vitae-object">
+                    <p>Your browser does not support PDFs. <a href="files/CV.pdf">Download the PDF</a>.</p>
+                </object>
+            </div>
         
-        <div class="vitae-container">
-            <object data="files/CV.pdf" type="application/pdf" class="vitae-object">
-                <p>Your browser does not support PDFs. <a href="files/CV.pdf">Download the PDF</a>.</p>
-            </object>
-        </div>
-    
-        <div class=footer-container>
-            <div class=footer-item>
-                <p>
-                    ©
-                    <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang.  All rights reserved.
-                </p>
+            <!-- Footer Section -->
+            <div class="footer-container">
+                <div class="footer-item">
+                    <p>
+                        ©
+                        <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang.  All rights reserved.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-        </body>
+    </body>
 </html>
