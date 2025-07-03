@@ -142,7 +142,7 @@ a:link {
 }
 
 /* Responsive filter row and column adjustments */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
     .filters-row {
         flex-direction: column;
         width: 78%;
