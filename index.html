@@ -70,7 +70,7 @@
         <div class ="home-container">
             <div class="list-container">
                 <div class="list-image">
-                    <img src="Images/homecover.jpg">
+                    <img src="Images/scholarlycover.jpg">
                 </div>
 
                 <div class="hero-blurb">
@@ -90,8 +90,7 @@
     </div>
     <div class="filter-col">
         <select id="tagFilter" onchange="filterAndSortArticles()">
-            <option value="all">Featured</option>
-            <option value="Healthcare">Featured</option>
+            <option value="Featured">Featured</option>
             <option value="Healthcare">Healthcare</option>
             <option value="Pharmacy">Pharmacy</option>
             <option value="Technology">Technology</option>
@@ -102,28 +101,35 @@
                 <script>
 const articlesData = [
 
-    {
-        date: "May 5, 2024",
-        title: "British Columbia found the key to attracting more family doctors, Ontario should do the same",
-        authors: "Co-authors: Laxsanaa Sivanthan, MD & Avital Pitkis, MD",
-        journal: "Toronto Star",
-        url: "https://www.thestar.com/opinion/contributors/british-columbia-found-the-key-to-attracting-more-family-doctors-ontario-should-do-the-same/article_6d68de6a-095a-11ef-afc7-13fcee64fcb4.html",
-        image: "Images/britishcolumbiafound.jpg",
-        tag: ["Healthcare", "Featured"]
+
+{
+        date: "March 27, 2023",
+        title: "To succeed as health care innovators, pharmacists need to cultivate an entrepreneurial mindset",
+        authors: "Zhang, P.C., Austin, Z.",
+        journal: "Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada",
+        volume: "156(3)",
+        doi: "10.1177/17151635231164622",
+        url: "https://journals.sagepub.com/doi/10.1177/17151635231164622",
+        image: "https://peterczhang.com/Images/CPJ.jpg",
+        tag: ["Healthcare", "Pharmacy", "Featured"]
     },
-    {
-        date: "September 1, 2023",
-        title: "Clearing the air: fighting for a breathable future",
-        authors: "Co-authors: Sudarshan Bala, MD & Gillian Goobie, MD, PhD",
-        journal: "Toronto Star",
-        url: "https://www.thestar.com/opinion/contributors/clearing-the-air-fighting-for-a-breathable-future/article_251e8f4a-c8c3-5b9e-9447-31eaacbead2d.html",
-        image: "Images/clearingtheair.jpg",
-        tag: ["Healthcare", "Featured"]
+
+{
+        date: "December 23, 2024",
+        title: "RAG in Health Care: A Novel Framework for Improving Communication and Decision-Making by Addressing LLM Limitations",
+        authors: "Ng, K. K. Y., Matsuba, I., & Zhang, P. C.",
+        journal: "NEJM AI",
+        volume: "2(1)",
+        doi: "10.1056/AIra2400380",
+        url: "https://ai.nejm.org/doi/full/10.1056/AIra2400380",
+        image: "https://peterczhang.com/Images/NEJM-AI.jpg",
+        tag: ["Healthcare", "Technology", "Featured"]
     },
+
     {
         date: "March 22, 2023",
         title: "Modernized home care can help stabilize health costs",
-        authors: "Co-author: Dr. Anser Daud, MD",
+        authors: "Co-author: Anser Daud, MD",
         journal: "Globe and Mail",
         url: "https://www.theglobeandmail.com/opinion/article-modernized-home-care-can-help-stabilize-health-costs/",
         image: "Images/modernizedhomecare.jpg",
@@ -132,7 +138,7 @@ const articlesData = [
     {
         date: "March 5, 2023",
         title: "Overcoming language barriers key to providing health-care",
-        authors: "Co-author: Dr. Avinash Pandey, MD",
+        authors: "Co-author: Avinash Pandey, MD",
         journal: "Toronto Star",
         url: "https://www.thestar.com/opinion/contributors/2023/03/05/overcoming-language-barriers-key-to-providing-health-care.html",
         image: "Images/overcominglanguagebarriers.jpg",
@@ -150,7 +156,7 @@ const articlesData = [
     {
         date: "May 31, 2022",
         title: "How pharmacist prescribing can alleviate health-care system pressures",
-        authors: "Co-author: Dr. Mina Tadrous, PharmD, PhD",
+        authors: "Co-author: Mina Tadrous, PharmD, PhD",
         journal: "Policy Options",
         url: "https://policyoptions.irpp.org/magazines/may-2022/pharmacists-prescribing-savings/",
         image: "Images/howpharmacistprescribingcanalleviate.jpg",
@@ -165,7 +171,7 @@ const articlesData = [
         image: "Images/thedangersofantimicrobialdrug.jpg",
         tag: ["Healthcare", "Featured"]
     },
-        {
+    {
         date: "October 4, 2020",
         title: "Naloxone needs to be in hands of as many people as possible",
         authors: "",
@@ -174,7 +180,7 @@ const articlesData = [
         image: "Images/naloxoneneeds.jpg",
         tag: ["Healthcare", "Featured"]
     },
-     {
+    {
         date: "August 28, 2020",
         title: "It’s time to normalize suicide prevention training at the workplace",
         authors: "",
