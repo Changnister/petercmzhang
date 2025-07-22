@@ -92,177 +92,91 @@
                         <a href="vitae.html" class="hero-blurb-btn">CV</a>
                     </div>
 
-                    <!-- Filters for Search, Sort, and Tag -->
-                    <div class="filters-row">
-                        <div class="filter-col">
-                            <input type="text" id="searchInput" placeholder="Search" onkeyup="filterAndSortArticles()"/>
+                    <!-- Article List (Static) -->
+
+                    <div class="container" id="articleList">
+                        <div class="column">
+                            <a href="https://journals.sagepub.com/doi/10.1177/17151635231164622" target="_blank" style="text-decoration:none;">
+                                <img src="https://peterczhang.com/Images/CPJ.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">To succeed as health care innovators, pharmacists need to cultivate an entrepreneurial mindset</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> March 27, 2023</p>
+                            <p style="margin: 0 0 4px 0;"> Zhang, P.C., Austin, Z.</p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada</p>
                         </div>
-                        <div class="filter-col">
-                            <select id="sortOrder" onchange="filterAndSortArticles()">
-                                <option value="newest">Sort by Latest</option>
-                                <option value="oldest">Sort by Earliest</option>
-                            </select>
+                        <div class="column">
+                            <a href="https://ai.nejm.org/doi/full/10.1056/AIra2400380" target="_blank" style="text-decoration:none;">
+                                <img src="https://peterczhang.com/Images/NEJM-AI.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">RAG in Health Care: A Novel Framework for Improving Communication and Decision-Making by Addressing LLM Limitations</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> December 23, 2024</p>
+                            <p style="margin: 0 0 4px 0;"> Ng, K. K. Y., Matsuba, I., & Zhang, P. C.</p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">NEJM AI</p>
                         </div>
-                        <div class="filter-col">
-                            <select id="tagFilter" onchange="filterAndSortArticles()">
-                                <option value="all">All Topics</option>
-                                <option value="Healthcare">Healthcare</option>
-                                <option value="Pharmacy">Pharmacy</option>
-                                <option value="Technology">Technology</option>
-                            </select>
+                        <div class="column">
+                            <a href="https://www.theglobeandmail.com/opinion/article-modernized-home-care-can-help-stabilize-health-costs/" target="_blank" style="text-decoration:none;">
+                                <img src="Images/modernizedhomecare.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">Modernized home care can help stabilize health costs</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> March 22, 2023</p>
+                            <p style="margin: 0 0 4px 0;"> Co-author: Anser Daud, MD</p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">Globe and Mail</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.thestar.com/opinion/contributors/2023/03/05/overcoming-language-barriers-key-to-providing-health-care.html" target="_blank" style="text-decoration:none;">
+                                <img src="Images/overcominglanguagebarriers.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">Overcoming language barriers key to providing health-care</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> March 5, 2023</p>
+                            <p style="margin: 0 0 4px 0;"> Co-author: Avinash Pandey, MD</p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">Toronto Star</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.thestar.com/opinion/contributors/2022/11/21/ask-a-pharmacist-before-you-split-tablets-for-your-children.html" target="_blank" style="text-decoration:none;">
+                                <img src="Images/askyapharmacistbefore.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">Ask a pharmacist before you split tablets for your children</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> November 21, 2022</p>
+                            <p style="margin: 0 0 4px 0;"></p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">Toronto Star</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://policyoptions.irpp.org/magazines/may-2022/pharmacists-prescribing-savings/" target="_blank" style="text-decoration:none;">
+                                <img src="Images/howpharmacistprescribingcanalleviate.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">How pharmacist prescribing can alleviate health-care system pressures</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> May 31, 2022</p>
+                            <p style="margin: 0 0 4px 0;"> Co-author: Mina Tadrous, PharmD, PhD</p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">Policy Options</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://nationalpost.com/wellness/science/the-dangers-of-antimicrobial-drug-resistance-must-not-be-ignored/wcm/2c79c9b2-6e06-4db3-8d07-fec5e8cf21d7/amp/" target="_blank" style="text-decoration:none;">
+                                <img src="Images/thedangersofantimicrobialdrug.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">The dangers of antimicrobial drug resistance must not be ignored</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> November 15, 2021</p>
+                            <p style="margin: 0 0 4px 0;"> Co-author: Abrar Ahmed</p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">Healthy Debate & National Post</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://windsorstar.com/opinion/letters/guest-column-naloxone-needs-to-be-in-hands-of-as-many-people-as-possible" target="_blank" style="text-decoration:none;">
+                                <img src="Images/naloxoneneeds.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">Naloxone needs to be in hands of as many people as possible</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> October 4, 2020</p>
+                            <p style="margin: 0 0 4px 0;"></p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">Windsor Star</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.thestar.com/opinion/contributors/2020/08/27/its-time-to-normalize-suicide-prevention-training-at-the-workplace.html" target="_blank" style="text-decoration:none;">
+                                <img src="Images/itstimetonormalize.jpg" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
+                                <h4 style="margin: 8px 0 4px 0; color: black;">It’s time to normalize suicide prevention training at the workplace</h4>
+                            </a>
+                            <p style="margin: 0 0 4px 0;"> August 28, 2020</p>
+                            <p style="margin: 0 0 4px 0;"></p>
+                            <p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">Toronto Star</p>
                         </div>
                     </div>
-
-                    <!-- Article List Container -->
-                    <div class="container" id="articleList"></div>
-
-                    <!-- Article Data and Filtering Script -->
-                    <script>
-                        // List of articles with metadata
-                        const articlesData = [
-                            {
-                                date: "March 27, 2023",
-                                title: "To succeed as health care innovators, pharmacists need to cultivate an entrepreneurial mindset",
-                                authors: "Zhang, P.C., Austin, Z.",
-                                journal: "Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada",
-                                volume: "156(3)",
-                                doi: "10.1177/17151635231164622",
-                                url: "https://journals.sagepub.com/doi/10.1177/17151635231164622",
-                                image: "https://peterczhang.com/Images/CPJ.jpg",
-                                tag: ["Healthcare", "Pharmacy"]
-                            },
-                            {
-                                date: "December 23, 2024",
-                                title: "RAG in Health Care: A Novel Framework for Improving Communication and Decision-Making by Addressing LLM Limitations",
-                                authors: "Ng, K. K. Y., Matsuba, I., & Zhang, P. C.",
-                                journal: "NEJM AI",
-                                volume: "2(1)",
-                                doi: "10.1056/AIra2400380",
-                                url: "https://ai.nejm.org/doi/full/10.1056/AIra2400380",
-                                image: "https://peterczhang.com/Images/NEJM-AI.jpg",
-                                tag: ["Healthcare", "Technology"]
-                            },
-                            {
-                                date: "March 22, 2023",
-                                title: "Modernized home care can help stabilize health costs",
-                                authors: "Co-author: Anser Daud, MD",
-                                journal: "Globe and Mail",
-                                url: "https://www.theglobeandmail.com/opinion/article-modernized-home-care-can-help-stabilize-health-costs/",
-                                image: "Images/modernizedhomecare.jpg",
-                                tag: ["Healthcare"]
-                            },
-                            {
-                                date: "March 5, 2023",
-                                title: "Overcoming language barriers key to providing health-care",
-                                authors: "Co-author: Avinash Pandey, MD",
-                                journal: "Toronto Star",
-                                url: "https://www.thestar.com/opinion/contributors/2023/03/05/overcoming-language-barriers-key-to-providing-health-care.html",
-                                image: "Images/overcominglanguagebarriers.jpg",
-                                tag: ["Healthcare"]
-                            },
-                            {
-                                date: "November 21, 2022",
-                                title: "Ask a pharmacist before you split tablets for your children",
-                                authors: "",
-                                journal: "Toronto Star",
-                                url: "https://www.thestar.com/opinion/contributors/2022/11/21/ask-a-pharmacist-before-you-split-tablets-for-your-children.html",
-                                image: "Images/askyapharmacistbefore.jpg",
-                                tag: ["Pharmacy", "Healthcare"]
-                            },
-                            {
-                                date: "May 31, 2022",
-                                title: "How pharmacist prescribing can alleviate health-care system pressures",
-                                authors: "Co-author: Mina Tadrous, PharmD, PhD",
-                                journal: "Policy Options",
-                                url: "https://policyoptions.irpp.org/magazines/may-2022/pharmacists-prescribing-savings/",
-                                image: "Images/howpharmacistprescribingcanalleviate.jpg",
-                                tag: ["Pharmacy", "Healthcare"]
-                            },
-                            {
-                                date: "November 15, 2021",
-                                title: "The dangers of antimicrobial drug resistance must not be ignored",
-                                authors: "Co-author: Abrar Ahmed",
-                                journal: "Healthy Debate & National Post",
-                                url: "https://nationalpost.com/wellness/science/the-dangers-of-antimicrobial-drug-resistance-must-not-be-ignored/wcm/2c79c9b2-6e06-4db3-8d07-fec5e8cf21d7/amp/",
-                                image: "Images/thedangersofantimicrobialdrug.jpg",
-                                tag: ["Healthcare"]
-                            },
-                            {
-                                date: "October 4, 2020",
-                                title: "Naloxone needs to be in hands of as many people as possible",
-                                authors: "",
-                                journal: "Windsor Star",
-                                url: "https://windsorstar.com/opinion/letters/guest-column-naloxone-needs-to-be-in-hands-of-as-many-people-as-possible",
-                                image: "Images/naloxoneneeds.jpg",
-                                tag: ["Healthcare"]
-                            },
-                            {
-                                date: "August 28, 2020",
-                                title: "It’s time to normalize suicide prevention training at the workplace",
-                                authors: "",
-                                journal: "Toronto Star",
-                                url: "https://www.thestar.com/opinion/contributors/2020/08/27/its-time-to-normalize-suicide-prevention-training-at-the-workplace.html",
-                                image: "Images/itstimetonormalize.jpg",
-                                tag: ["Healthcare"]
-                            }
-                        ];
-
-                        // Render articles to the DOM
-                        function renderArticles(articles) {
-                            const container = document.getElementById("articleList");
-                            container.innerHTML = "";
-
-                            articles.forEach(article => {
-                                const column = document.createElement("div");
-                                column.classList.add("column");
-
-                                // Use a default image if none provided
-                                const imgSrc = article.image || "Images/Writingcover.jpg";
-
-                                column.innerHTML = `
-                                    <a href="${article.url}" target="_blank" style="text-decoration:none;">
-                                        <img src="${imgSrc}" alt="Article image" style="width: 100%; height: 200px; border-radius: 8px; object-fit:cover; margin: 0px;">
-                                        <h4 style="margin: 8px 0 4px 0; color: black;">${article.title}</h4>
-                                    </a>
-                                    <p style="margin: 0 0 4px 0;"> ${article.date}</p>
-                                    <p style="margin: 0 0 4px 0;"> ${article.authors}</p>
-                                    ${article.journal ? `<p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">${article.journal}</p>` : ""}
-                                `;
-                                container.appendChild(column);
-                            });
-                        }
-
-                        // Filter and sort articles based on user input
-                        function filterAndSortArticles() {
-                            const input = document.getElementById('searchInput').value.toLowerCase();
-                            const sortOrder = document.getElementById('sortOrder').value;
-                            const tag = document.getElementById('tagFilter').value;
-
-                            let filteredArticles = articlesData.filter(article =>
-                                (article.title && article.title.toLowerCase().includes(input)) ||
-                                (article.authors && article.authors.toLowerCase().includes(input)) ||
-                                (article.journal && article.journal.toLowerCase().includes(input))
-                            );
-
-                            // Proper tag filtering
-                            if (tag !== "all") {
-                                filteredArticles = filteredArticles.filter(article =>
-                                    Array.isArray(article.tag) && article.tag.includes(tag)
-                                );
-                            }
-
-                            filteredArticles.sort((a, b) => {
-                                return sortOrder === 'newest'
-                                    ? new Date(b.date) - new Date(a.date)
-                                    : new Date(a.date) - new Date(b.date);
-                            });
-
-                            renderArticles(filteredArticles);
-                        }
-
-                        // Initialize article list on page load
-                        window.onload = filterAndSortArticles;
-                    </script>
                 </div>
             </div>
 
