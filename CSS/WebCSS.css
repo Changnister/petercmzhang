@@ -141,6 +141,22 @@ a:link {
     background: #f0f0fa;
 }
 
+.featured-works-note {
+  text-align: center;
+  margin: 0 0 18px 0;
+  color: #555;
+  font-style: italic;
+  font-size: 0.97rem;
+  padding: 0 10px;
+}
+@media (max-width: 700px) {
+  .featured-works-note {
+    font-size: 0.89rem;
+    padding: 0 4vw;
+    line-height: 1.5;
+  }
+}
+
 /* Responsive filter row and column adjustments */
 @media screen and (max-width: 700px) {
     .filters-row {
