@@ -143,7 +143,7 @@ a:link {
 
 .featured-works-note {
   text-align: center;
-  margin: 0 0 18px 0;
+  margin: 0 auto 18px auto;
   color: #555;
   font-style: italic;
   font-size: 0.97rem;
