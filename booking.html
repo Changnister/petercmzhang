@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/WebCSS.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="header-container">
+        <div class="header-item">
+          <a href="index.html">PETER ZHANG</a>
+        </div>
+        <!-- Navigation Bar -->
+        <div class="nav">
+          <div class="nav-item">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="publications.html">Publications</a>
+          </div>
+          <div class="nav-item">
+            <a href="scholarly.html">Scholarly</a>
+          </div>
+          <div class="nav-item">
+            <a href="media.html">Media</a>
+          </div>
+        </div>
+        <!-- Social Media Links -->
+        <div class="socialmedia">
+          <div class="media-item">
+            <a href="https://www.linkedin.com/in/peterczhang/">
+              <img src="Images/LinkedIn.png">
+            </a>
+          </div>
+          <div class="media-item">
+            <a href="https://www.instagram.com/petercmzhang/">
+              <img src="Images/Instagram.png">
+            </a>
+          </div>
+        </div>
+        <!-- Hamburger Menu for Responsive Navigation -->
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <!-- Responsive Navigation Script -->
+        <script src="navresponsive.js"></script>
+      </div>
+      <div class="home-container">
+        <div class="list-container">
+          <div class="list-image">
+            <img src="Images/mediacover.png">
+          </div>
+          <div class="booking-hero">
+            <h1 class="booking-header-item">REQUEST A SPEAKING ENGAGEMENT</h1>
+          </div>
+          <form class="booking-form" action="https://formspree.io/f/xldlwrjo" method="POST">
+            <div class="booking-row">
+              <div class="booking-col booking-label">
+                <label for="first-name">First Name:</label>
+                <input id="first-name" name="first-name" required class="booking-input">
+              </div>
+              <div class="booking-col booking-label">
+                <label for="last-name">Last Name:</label>
+                <input id="last-name" name="last-name" required class="booking-input">
+              </div>
+            </div>
+            <div class="booking-label">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required class="booking-input">
+            </div>
+            <div class="booking-label">
+              <label for="date">Preferred Date:</label>
+              <input type="date" id="date" name="date" class="booking-input">
+            </div>
+            <div class="booking-label">
+              <label for="referral">Organization</label>
+              <input id="referral" name="referral" class="booking-input">
+            </div>
+            <div class="booking-label">
+              <label for="message">Details:</label>
+              <textarea id="message" name="message" rows="5" required class="booking-textarea"></textarea>
+            </div>
+            <div class="booking-label">
+              <button type="submit" class="hero-blurb-btn booking-btn">Send Booking Request</button>
+            </div>
+          </form>
+          <div class="booking-direct-email">
+            Or email directly at:
+            <a href="mailto:bookpeterzhang@gmail.com" class="booking-direct-link">bookpeterzhang@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-item">
+          <p>
+            © <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang.  All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

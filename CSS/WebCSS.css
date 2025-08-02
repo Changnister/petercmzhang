@@ -1,3 +1,4 @@
+
 /* Base styles for html and body */
 html, body {
     font-family: 'Roboto', sans-serif;
@@ -149,6 +150,141 @@ a:link {
   font-size: 0.97rem;
   padding: 0 10px;
 }
+
+/* Booking form styles (transferred from inline in booking.html) */
+.booking-header-item {
+    font-size: 24px;
+    color: black;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.booking-form {
+    max-width: 700px;
+    margin: auto;
+}
+.booking-row {
+    display: flex;
+    gap: 18px;
+}
+.booking-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.booking-label {
+    font-weight: normal;
+    display: block;
+
+}
+.booking-input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d1e0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.booking-textarea {
+    width: 100%;
+    margin-bottom: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d1e0;
+    resize: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.booking-btn {
+    width: 100%;
+    box-sizing: border-box;
+}
+.booking-direct-email {
+    text-align: center;
+    margin-top: 18px;
+    color: #555;
+    font-size: 0.97rem;
+}
+.booking-direct-link {
+    color: #2d2564;
+}
+
+@media (max-width: 700px) {
+    .booking-form {
+        max-width: 98vw;
+        padding: 0 2vw;
+    }
+    .booking-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .booking-col {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .booking-label {
+        margin-bottom: 8px;
+        font-size: 1rem;
+    }
+    .booking-input, .booking-textarea, .booking-btn {
+        font-size: 1rem;
+        padding: 10px 8px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-right: 0;
+    }
+    .booking-hero {
+        padding: 18px 2vw 12px 2vw;
+        max-width: 98vw;
+    }
+    .booking-hero-title, .booking-hero h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+    .booking-direct-email {
+        font-size: 0.89rem;
+        padding: 0 2vw;
+        line-height: 1.5;
+    }
+}
+
+/* Hero section for bookings page */
+.booking-hero {
+    margin: 32px 0 24px 0;
+    padding: 40px 7% 32px 7%;
+    border-radius: 18px;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.booking-hero-title {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    color: #2d2564;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(45,37,100,0.07);
+}
+@media (max-width: 700px) {
+    .booking-hero {
+        padding: 24px 6% 18px 6%;
+        max-width: 98vw;
+    }
+    .booking-hero-title {
+        font-size: 1.35rem;
+        letter-spacing: 1px;
+    }
+}
+
 @media (max-width: 700px) {
   .featured-works-note {
     font-size: 0.89rem;
@@ -693,47 +829,53 @@ a:link {
 
 /* Hero blurb section for homepage */
 .hero-blurb {
-    margin: 24px 0 24px 0;
-    padding: 48px 8% 40px 8%;         /* Larger, even padding */
-    border-radius: 14px;              /* Slightly more rounded */
-    text-align: center;
-    max-width: 900px;                 /* Prevents it from being too wide on large screens */
-    margin-left: auto;
-    margin-right: auto;
+  margin: 24px 0 24px 0;
+  padding: 40px 8% 40px 8%; /* Larger, even padding */
+  border-radius: 14px; /* Slightly more rounded */
+  text-align: center;
+  max-width: 900px; /* Prevents it from being too wide on large screens */
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-blurb h1 {
-    font-size: 2.2rem;                /* Slightly larger headline */
-    margin-bottom: 20px;
-    color: #232946;                   /* Professional, dark blue */
-    font-weight: 800;                 /* Stronger weight */
-    letter-spacing: 1px;
-    line-height: 1.15;
+  font-size: 2.2rem; /* Slightly larger headline */
+  margin-bottom: 20px;
+  color: #232946; /* Professional, dark blue */
+  font-weight: 800; /* Stronger weight */
+  letter-spacing: 1px;
+  line-height: 1.15;
 }
 .hero-blurb p {
-    font-size: 1.15rem;
-    color: #333;
-    margin: 0 auto 18px auto;
-    max-width: 700px;                 /* Keeps text line length readable */
-    line-height: 1.7;
-    font-weight: 400;
-    text-align: left;
+  font-size: 1.15rem;
+  color: #333;
+  margin: 0 auto 18px auto;
+  max-width: 700px; /* Keeps text line length readable */
+  line-height: 1.7;
+  font-weight: 400;
+  text-align: center;
+  max-width: 800px;
 }
 .hero-blurb em {
-    font-style: italic;
-    color: #2d2564;
+  font-style: italic;
+  color: #2d2564;
 }
 .hero-blurb-btn {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 12px 32px;
-    background: #232946;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.2s, box-shadow 0.2s;
+  display: inline-block;
+  margin-top: 18px;
+  margin-right: 12px;
+  padding: 12px 32px;
+  min-width: 160px;
+  background: #232946;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 8px rgba(35,41,70,0.08);
+}
+.hero-blurb-btn:last-child {
+    margin-right: 0;
 }
 .hero-blurb-btn:hover {
     background: #444b6e;
@@ -758,6 +900,10 @@ a:link {
         font-size: 1rem;
         padding: 12px 0;
         box-sizing: border-box;
-        margin-right: 10%;
+        margin-right: 0;
+        min-width: unset;
+    }
+    .hero-blurb-btn:not(:last-child) {
+        margin-bottom: 10px;
     }
 }

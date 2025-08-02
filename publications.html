@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Peter Zhang | Publications </title>
+  <head>
+    <title>Peter Zhang | Publications</title>
 
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-        <link rel="stylesheet" href="CSS/WebCSS.css">
-        <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
-       
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/WebCSS.css">
+    <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
 
-        <meta name="title" property="og:title" content="Peter Zhang">
-        <meta name="description" property="og:description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
-        <meta property="og:type" content="Website">
-        <meta name="image" property="og:image" content="Images/Linkpopup.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" property="og:title" content="Peter Zhang">
+    <meta name="description" property="og:description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
+    <meta property="og:type" content="Website">
+    <meta name="image" property="og:image" content="Images/Linkpopup.png">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-V41Z66KFZF');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-V41Z66KFZF');
     </script>
+  </head>
 
-    </head>
+  <body>
+    <div class="page-container">
+      <div class="header-container">
+        <div class="header-item">
+          <a href="index.html">PETER ZHANG</a>
+        </div>
 
-    <body> 
+        <div class="nav">
+          <div class="nav-item">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="publications.html">Publications</a>
+          </div>
+          <div class="nav-item">
+            <a href="scholarly.html">Scholarly</a>
+          </div>
+          <div class="nav-item">
+            <a href="media.html">Media</a>
+          </div>
+        </div>
 
-        <div class="page-container">
-            <div class="header-container">
-                <div class ="header-item">
-                    <a href='index.html'>PETER ZHANG</a>
-                </div>
-    
-                 <div class="nav">
-                    <div class ="nav-item">
-                        <a href='index.html'>Home</a>
-                    </div>
-                    <div class ="nav-item">
-                        <a href="publications.html">Publications</a>
-                    </div>
-                    <div class ="nav-item">
-                        <a href='scholarly.html'>Scholarly</a>
-                    </div>
-                    <div class ="nav-item">
-                        <a href='media.html'>Media</a>
-                    </div>
-                </div>
-    
-                <div class="socialmedia">
-                    <div class ="media-item">
-                        <a href="https://www.linkedin.com/in/peterczhang/"> <img src="Images/LinkedIn.png"></a>
-                    </div>
-                    <div class ="media-item">
-                        <a href="https://www.instagram.com/petercmzhang/"> <img src="Images/Instagram.png"></a>
-                    </div>
-                </div>
+        <div class="socialmedia">
+          <div class="media-item">
+            <a href="https://www.linkedin.com/in/peterczhang/">
+              <img src="Images/LinkedIn.png">
+            </a>
+          </div>
+          <div class="media-item">
+            <a href="https://www.instagram.com/petercmzhang/">
+              <img src="Images/Instagram.png">
+            </a>
+          </div>
+        </div>
 
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    </div>
-    
-                <script src="navresponsive.js"></script>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
 
-            </div>    
-        
-        <div class ="home-container">
-            <div class="list-container">
-                <div class="list-image">
-                    <img src="Images/Writingcover.jpg">
-                </div>
+        <script src="navresponsive.js"></script>
+      </div>
 
-             <div class="filters-row">
-    <div class="filter-col">
-        <input type="text" id="searchInput" placeholder="Search" onkeyup="filterAndSortArticles()"/>
-    </div>
-    <div class="filter-col">
-        <select id="sortOrder" onchange="filterAndSortArticles()">
-            <option value="newest">Sort by Latest</option>
-            <option value="oldest">Sort by Earliest</option>
-        </select>
-    </div>
-    <div class="filter-col">
-        <select id="tagFilter" onchange="filterAndSortArticles()">
-            <option value="all">All Topics</option>
-            <option value="Healthcare">Healthcare</option>
-            <option value="Pharmacy">Pharmacy</option>
-            <option value="Technology">Technology</option>
-        </select>
-    </div>
-</div>
-                <div class="container" id="articleList"></div>
-                <script>
+      <div class="home-container">
+        <div class="list-container">
+          <div class="list-image">
+            <img src="Images/Writingcover.jpg">
+          </div>
+
+          <div class="filters-row">
+            <div class="filter-col">
+              <input type="text" id="searchInput" placeholder="Search" onkeyup="filterAndSortArticles()" />
+            </div>
+            <div class="filter-col">
+              <select id="sortOrder" onchange="filterAndSortArticles()">
+                <option value="newest">Sort by Latest</option>
+                <option value="oldest">Sort by Earliest</option>
+              </select>
+            </div>
+            <div class="filter-col">
+              <select id="tagFilter" onchange="filterAndSortArticles()">
+                <option value="all">All Topics</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Pharmacy">Pharmacy</option>
+                <option value="Technology">Technology</option>
+              </select>
+            </div>
+          </div>
+          <div class="container" id="articleList"></div>
+          <script>
 const articlesData = [
     {
         date: "July 31, 2025",
