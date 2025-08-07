@@ -1,3 +1,67 @@
+/* Logos Section Styles */
+.logos-section {
+  text-align: center;
+  margin: 0 0 48px 0;
+  background: #111;
+  padding: 72px 0 64px 0;
+}
+.logos-section h3 {
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+  margin-top: 0px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+.logos-section h3::after {
+  content: "";
+  display: block;
+  margin: 12px auto 0 auto;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+  opacity: 0.95;
+}
+.logos-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 60px;
+  align-items: center;
+}
+.logos-row img {
+  max-height: 48px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s, opacity 0.2s, transform 0.18s;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+
+/* Mobile logo optimization */
+@media (max-width: 700px) {
+  .logos-row {
+    flex-wrap: wrap;
+    gap: 18px 10vw;
+    justify-content: center;
+    padding: 0 2vw;
+  }
+  .logo-img {
+    max-width: 38vw;
+    max-height: 34px;
+    padding: 6px 4vw;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+}
+.logos-row img:hover {
+  filter: brightness(0) invert(1) drop-shadow(0 0 12px #FFD700);
+  background: rgba(255, 215, 0, 0.08);
+  transform: translateY(-2px) scale(1.07);
+}
 
 /* Base styles for html and body */
 html, body {
@@ -144,7 +208,7 @@ a:link {
 
 .featured-works-note {
   text-align: center;
-  margin: 0 auto 18px auto;
+  margin: 18px auto 18px auto;
   color: #555;
   font-style: italic;
   font-size: 0.97rem;
@@ -158,48 +222,55 @@ a:link {
     text-align: left;
     font-weight: 900;
     letter-spacing: 3px;
+    margin-bottom: 0px;
 }
-
 .booking-form {
-    max-width: 700px;
-    margin: auto;
+    max-width: 900px;
+    margin: 0 auto 32px auto;
+    padding-left: 0;
+    padding-right: 0;
 }
 .booking-row {
     display: flex;
-    gap: 18px;
+    gap: 32px;
+    margin-left: 0;
+    margin-right: 0;
 }
 .booking-col {
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 .booking-label {
     font-weight: normal;
     display: block;
-
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 1.08rem;
 }
 .booking-input {
     width: 100%;
-    margin-bottom: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 12px;
-    border-radius: 6px;
-    border: 1px solid #d1d1e0;
+    margin-bottom: 18px;
+    padding: 10px 12px;
+    border-radius: 7px;
+    border: 1.5px solid #d1d1e0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.08rem;
 }
 .booking-textarea {
     width: 100%;
-    margin-bottom: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 12px;
-    border-radius: 6px;
-    border: 1px solid #d1d1e0;
+    margin-bottom: 18px;
+    padding: 10px 12px;
+    border-radius: 7px;
+    border: 1.5px solid #d1d1e0;
     resize: none;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.08rem;
 }
 .booking-btn {
     width: 100%;
@@ -207,12 +278,11 @@ a:link {
 }
 .booking-direct-email {
     text-align: center;
-    margin-top: 18px;
     color: #555;
     font-size: 0.97rem;
 }
 .booking-direct-link {
-    color: #2d2564;
+    color: black;
 }
 
 @media (max-width: 700px) {
@@ -229,13 +299,14 @@ a:link {
         margin-bottom: 10px;
     }
     .booking-label {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         font-size: 1rem;
     }
     .booking-input, .booking-textarea, .booking-btn {
         font-size: 1rem;
         padding: 10px 8px;
-        width: 100%;
+        width: 92vw;
+        max-width: 100%;
         box-sizing: border-box;
         margin-right: 0;
     }
@@ -258,10 +329,10 @@ a:link {
 /* Hero section for bookings page */
 .booking-hero {
     margin: 32px 0 24px 0;
-    padding: 40px 7% 32px 7%;
+    padding: 24px 7% 24px 7%;
     border-radius: 18px;
     text-align: center;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -839,7 +910,7 @@ a:link {
 }
 .hero-blurb h1 {
   font-size: 2.2rem; /* Slightly larger headline */
-  margin-bottom: 20px;
+  margin-bottom: 28px; /* More space below heading */
   color: #232946; /* Professional, dark blue */
   font-weight: 800; /* Stronger weight */
   letter-spacing: 1px;
@@ -848,7 +919,7 @@ a:link {
 .hero-blurb p {
   font-size: 1.15rem;
   color: #333;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 28px auto; /* More space below blurb */
   max-width: 700px; /* Keeps text line length readable */
   line-height: 1.7;
   font-weight: 400;
@@ -857,28 +928,30 @@ a:link {
 }
 .hero-blurb em {
   font-style: italic;
-  color: #2d2564;
+  color: black;
 }
 .hero-blurb-btn {
   display: inline-block;
-  margin-top: 14px;
-  margin-right: 10px;
-  padding: 8px 22px;
-  min-width: 110px;
-  background: #232946;
+  margin-top: 0;
+  margin-bottom: 10px; /* Add vertical space below each button */
+  margin-right: 28px; /* Slightly more horizontal gap */
+  padding: 18px 34px;
+  min-width: 120px;
+  background: black;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.07rem;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 7px;
   text-decoration: none;
-  transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 1.5px 6px rgba(35,41,70,0.10);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+  box-shadow: 0 2px 10px rgba(35,41,70,0.13);
+  vertical-align: middle;
 }
 .hero-blurb-btn:last-child {
     margin-right: 0;
 }
 .hero-blurb-btn:hover {
-    background: #444b6e;
+    background: black;
     color: #fff;
     box-shadow: 0 4px 16px rgba(35,41,70,0.12);
 }
