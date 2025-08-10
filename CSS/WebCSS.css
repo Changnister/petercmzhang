@@ -1,3 +1,27 @@
+/* Article List Styles */
+.article-link {
+    text-decoration: none;
+}
+.article-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0px;
+}
+.article-title {
+    margin: 8px 0 4px 0;
+    color: black;
+}
+.article-meta {
+    margin: 0 0 4px 0;
+}
+.article-journal {
+    margin: 0 0 4px 0;
+    color: #2d2564;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
 /* Spoken At Section Styles */
 
 .spoken-section {
