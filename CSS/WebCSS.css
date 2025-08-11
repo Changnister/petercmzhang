@@ -102,7 +102,7 @@
 /* Logos Section Styles */
 .logos-section {
   text-align: center;
-  margin: 0 0 48px 0;
+  margin: 0 0 0 0;
   background: #111;
   padding: 72px 0 64px 0;
 }
@@ -309,7 +309,7 @@ a:link {
 
 .featured-works-note {
   text-align: center;
-  margin: 18px auto 18px auto;
+  margin: 27px auto 18px auto;
   color: #555;
   font-style: italic;
   font-size: 0.97rem;
