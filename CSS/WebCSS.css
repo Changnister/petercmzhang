@@ -1036,8 +1036,8 @@ a:link {
   margin-top: 0;
   margin-bottom: 10px; /* Add vertical space below each button */
   margin-right: 28px; /* Slightly more horizontal gap */
-  padding: 18px 34px;
-  min-width: 120px;
+    padding: 8px 28px;
+    min-width: 90px;
   background: black;
   color: #fff;
   font-size: 1.07rem;
