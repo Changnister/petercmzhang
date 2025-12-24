@@ -4,42 +4,54 @@
     <title>Peter Zhang | Scholarly</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
     <!-- Main CSS -->
-    <link rel="stylesheet" href="CSS/WebCSS.css">
+    <link rel="stylesheet" href="CSS/WebCSS.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Open Graph Meta Tags -->
-    <meta name="title" property="og:title" content="Peter Zhang">
-    <meta name="description" property="og:description" content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works.">
-    <meta property="og:type" content="Website">
-    <meta name="image" property="og:image" content="Images/Linkpopup.png">
+    <meta name="title" property="og:title" content="Peter Zhang" />
+    <meta
+      name="description"
+      property="og:description"
+      content="My name is Peter Zhang and I write about healthcare, strategy, and technology. Here are some of my works."
+    />
+    <meta property="og:type" content="Website" />
+    <meta name="image" property="og:image" content="Images/Linkpopup.png" />
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-V41Z66KFZF');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-V41Z66KFZF");
     </script>
   </head>
 
-  <body>
+  <body class="page-scholarly">
     <div class="page-container">
       <!-- Header Section -->
       <div class="header-container">
         <div class="header-item">
-          <a href="index.html">PETER ZHANG</a>
+          <a href="/">PETER ZHANG</a>
         </div>
 
         <!-- Navigation Bar -->
         <div class="nav">
           <div class="nav-item">
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
           </div>
           <div class="nav-item">
             <a href="publications.html">Publications</a>
@@ -56,12 +68,12 @@
         <div class="socialmedia">
           <div class="media-item">
             <a href="https://www.linkedin.com/in/peterczhang/">
-              <img src="Images/LinkedIn.png">
+              <img src="Images/LinkedIn.png" />
             </a>
           </div>
           <div class="media-item">
             <a href="https://www.instagram.com/petercmzhang/">
-              <img src="Images/Instagram.png">
+              <img src="Images/Instagram.png" />
             </a>
           </div>
         </div>
@@ -81,13 +93,18 @@
       <div class="home-container">
         <div class="list-container">
           <div class="list-image">
-            <img src="Images/scholarlycover.jpg">
+            <img src="Images/scholarlycover.jpg" />
           </div>
 
           <!-- Filters for Search, Sort, and Tag -->
           <div class="filters-row">
             <div class="filter-col">
-              <input type="text" id="searchInput" placeholder="Search" onkeyup="filterAndSortArticles()" />
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search"
+                onkeyup="filterAndSortArticles()"
+              />
             </div>
             <div class="filter-col">
               <select id="sortOrder" onchange="filterAndSortArticles()">
@@ -113,181 +130,255 @@
           <script>
             // List of articles with metadata
             const articlesData = [
-                            {
-                              date: "October 4, 2025",
-                              title: "Empowering pharmacists in Canada’s drug shortage response",
-                              authors: "Zhang, P. C., Tadrous, M.",
-                              journal: "Canadian Pharmacists Journal / Revue des Pharmaciens du Canada",
-                              volume: "0(0)",
-                              doi: "10.1177/17151635251365666",
-                              url: "https://journals.sagepub.com/doi/10.1177/17151635251365666",
-                              image: "https://peterczhang.com/Images/CPJ.jpg",
-                              tag: ["Healthcare", "Pharmacy"]
-                            },
-                            {
-                                date: "December 23, 2024",
-                                title: "RAG in Health Care: A Novel Framework for Improving Communication and Decision-Making by Addressing LLM Limitations",
-                                authors: "Ng, K. K. Y., Matsuba, I., & Zhang, P. C.",
-                                journal: "NEJM AI",
-                                volume: "2(1)",
-                                doi: "10.1056/AIra2400380",
-                                url: "https://ai.nejm.org/doi/full/10.1056/AIra2400380",
-                                image: "https://peterczhang.com/Images/NEJM-AI.jpg",
-                                tag: ["Healthcare", "Technology"]
-                            },
-                            {
-                                date: "March 4, 2024",
-                                title: "To maximise impact, hospital pharmacists need to increase visibility",
-                                authors: "Zhang, P. C., Matinnia, C., & Austin, Z.",
-                                journal: "European Journal of Hospital Pharmacy",
-                                volume: "31(3)",
-                                doi: "10.1136/ejhpharm-2024-004137",
-                                url: "https://ejhp.bmj.com/content/31/3/185",
-                                image: "https://peterczhang.com/Images/EJHP.png",
-                                tag: ["Healthcare", "Pharmacy"]
-                            },
-                            {
-                                date: "December 1, 2023",
-                                title: "Advancing medical affair capabilities and insight generation through machine learning techniques",
-                                authors: "Ng, K.K.Y., Zhang, P.C.",
-                                journal: "Journal of Pharmaceutical Policy and Practice",
-                                volume: "165(16)",
-                                doi: "10.1186/s40545-023-00670-w",
-                                url: "https://joppp.biomedcentral.com/articles/10.1186/s40545-023-00670-w",
-                                image: "https://peterczhang.com/Images/JPPP.png",
-                                tag: ["Healthcare", "Technology"]
-                            },
-                            {
-                                date: "March 27, 2023",
-                                title: "To succeed as health care innovators, pharmacists need to cultivate an entrepreneurial mindset",
-                                authors: "Zhang, P.C., Austin, Z.",
-                                journal: "Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada",
-                                volume: "156(3)",
-                                doi: "10.1177/17151635231164622",
-                                url: "https://journals.sagepub.com/doi/10.1177/17151635231164622",
-                                image: "https://peterczhang.com/Images/CPJ.jpg",
-                                tag: ["Healthcare", "Pharmacy", "Entrepreneurship"]
-                            },
-                            {
-                                date: "October 11, 2022",
-                                title: "Patient Safety from a Pharmacy Perspective",
-                                authors: "Ho, C., Zhang, P.C.",
-                                journal: "Encyclopedia of Evidence in Pharmaceutical Public Health and Health Services Research in Pharmacy",
-                                doi: "10.1007/978-3-030-50247-8_72-1",
-                                url: "https://link.springer.com/referenceworkentry/10.1007/978-3-030-50247-8_72-1",
-                                image: "https://peterczhang.com/Images/Springer Nature Link.jpg",
-                                tag: ["Healthcare", "Pharmacy"]
-                            },
-                            {
-                                date: "September 20, 2021",
-                                title: "3D-Printed Personal Protective Face Shields During the COVID-19 Pandemic: A Survey of Canadian Frontline Workers",
-                                authors: "Daud, A., Hussein, I. M., Zhang, P. C., Ahmed, Y., Trac, J., Vujovic, N., Rizvi, S. F., & Kuzyk, P. R.",
-                                journal: "Cureus",
-                                doi: "10.7759/cureus.18141",
-                                url: "https://www.cureus.com/articles/70587-3d-printed-personal-protective-face-shields-during-the-covid-19-pandemic-a-survey-of-canadian-frontline-workers",
-                                image: "https://peterczhang.com/Images/Cureus.png",
-                                tag: ["Technology", "Pharmacy"]
-                            },
-                            {
-                                date: "September 20, 2021",
-                                title: "The future of pharmacy is intertwined with digital health innovation",
-                                authors: "Zhang, P. C.",
-                                journal: "Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada",
-                                volume: "155(1)",
-                                doi: "10.1177/17151635211044474",
-                                url: "https://journals.sagepub.com/doi/full/10.1177/17151635211044474",
-                                image: "https://peterczhang.com/Images/CPJ.jpg",
-                                tag: ["Technology", "Pharmacy"]
-                            },
-                            {
-                                date: "April 27, 2021",
-                                title: "Overcoming vaccine deployment challenges among the hardest to reach: lessons from polio elimination in India",
-                                authors: "Bellatin, A., Hyder, A., Rao, S., Zhang, P. C., & Mcgahan, A. M.",
-                                journal: "BMJ Global Health",
-                                volume: "6(4)",
-                                doi: "10.1136/bmjgh-2021-005125",
-                                url: "https://gh.bmj.com/content/6/4/e005125.full",
-                                image: "https://peterczhang.com/Images/BMJGH.png",
-                                tag: ["Healthcare"]
-                            },
-                            {
-                                date: "November 23, 2020",
-                                title: "Optimization of community-led 3D printing for the production of protective face shields",
-                                authors: "Zhang, P. C., Ahmed, Y., Hussein, I. M., Afenu, E., Feasson, M., & Daud, A.",
-                                journal: "3D Printing in Medicine",
-                                volume: "6(1)",
-                                doi: "10.1186/s41205-020-00089-y",
-                                url: "https://threedmedprint.biomedcentral.com/articles/10.1186/s41205-020-00089-y",
-                                image: "https://peterczhang.com/Images/3D Printing in Medicine.png",
-                                tag: ["Technology", "Pharmacy"]
-                            }
-                        ];
+              {
+                date: "October 4, 2025",
+                title:
+                  "Empowering pharmacists in Canada’s drug shortage response",
+                authors: "Zhang, P. C., Tadrous, M.",
+                journal:
+                  "Canadian Pharmacists Journal / Revue des Pharmaciens du Canada",
+                volume: "0(0)",
+                doi: "10.1177/17151635251365666",
+                url: "https://journals.sagepub.com/doi/10.1177/17151635251365666",
+                image: "https://peterczhang.com/Images/drugshortages.jpg",
+                tag: ["Healthcare", "Pharmacy"],
+              },
+              {
+                date: "December 23, 2024",
+                title:
+                  "RAG in Health Care: A Novel Framework for Improving Communication and Decision-Making by Addressing LLM Limitations",
+                authors: "Ng, K. K. Y., Matsuba, I., & Zhang, P. C.",
+                journal: "NEJM AI",
+                volume: "2(1)",
+                doi: "10.1056/AIra2400380",
+                url: "https://ai.nejm.org/doi/full/10.1056/AIra2400380",
+                image: "https://peterczhang.com/Images/NEJM-AI.jpg",
+                tag: ["Healthcare", "Technology"],
+              },
+              {
+                date: "March 4, 2024",
+                title:
+                  "To maximise impact, hospital pharmacists need to increase visibility",
+                authors: "Zhang, P. C., Matinnia, C., & Austin, Z.",
+                journal: "European Journal of Hospital Pharmacy",
+                volume: "31(3)",
+                doi: "10.1136/ejhpharm-2024-004137",
+                url: "https://ejhp.bmj.com/content/31/3/185",
+                image:
+                  "https://peterczhang.com/Images/hospitalpharmacistvisibilityscholarly.jpg",
+                tag: ["Healthcare", "Pharmacy"],
+              },
+              {
+                date: "December 1, 2023",
+                title:
+                  "Advancing medical affair capabilities and insight generation through machine learning techniques",
+                authors: "Ng, K.K.Y., Zhang, P.C.",
+                journal: "Journal of Pharmaceutical Policy and Practice",
+                volume: "165(16)",
+                doi: "10.1186/s40545-023-00670-w",
+                url: "https://joppp.biomedcentral.com/articles/10.1186/s40545-023-00670-w",
+                image: "https://peterczhang.com/Images/JPPP.png",
+                tag: ["Healthcare", "Technology"],
+              },
+              {
+                date: "March 27, 2023",
+                title:
+                  "To succeed as health care innovators, pharmacists need to cultivate an entrepreneurial mindset",
+                authors: "Zhang, P.C., Austin, Z.",
+                journal:
+                  "Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada",
+                volume: "156(3)",
+                doi: "10.1177/17151635231164622",
+                url: "https://journals.sagepub.com/doi/10.1177/17151635231164622",
+                image: "https://peterczhang.com/Images/CPJ.jpg",
+                tag: ["Healthcare", "Pharmacy", "Entrepreneurship"],
+              },
+              {
+                date: "October 11, 2022",
+                title: "Patient Safety from a Pharmacy Perspective",
+                authors: "Ho, C., Zhang, P.C.",
+                journal:
+                  "Encyclopedia of Evidence in Pharmaceutical Public Health and Health Services Research in Pharmacy",
+                doi: "10.1007/978-3-030-50247-8_72-1",
+                url: "https://link.springer.com/referenceworkentry/10.1007/978-3-030-50247-8_72-1",
+                image:
+                  "https://peterczhang.com/Images/Springer Nature Link.jpg",
+                tag: ["Healthcare", "Pharmacy"],
+              },
+              {
+                date: "September 20, 2021",
+                title:
+                  "3D-Printed Personal Protective Face Shields During the COVID-19 Pandemic: A Survey of Canadian Frontline Workers",
+                authors:
+                  "Daud, A., Hussein, I. M., Zhang, P. C., Ahmed, Y., Trac, J., Vujovic, N., Rizvi, S. F., & Kuzyk, P. R.",
+                journal: "Cureus",
+                doi: "10.7759/cureus.18141",
+                url: "https://www.cureus.com/articles/70587-3d-printed-personal-protective-face-shields-during-the-covid-19-pandemic-a-survey-of-canadian-frontline-workers",
+                image: "https://peterczhang.com/Images/Cureus.png",
+                tag: ["Technology", "Pharmacy"],
+              },
+              {
+                date: "September 20, 2021",
+                title:
+                  "The future of pharmacy is intertwined with digital health innovation",
+                authors: "Zhang, P. C.",
+                journal:
+                  "Canadian Pharmacists Journal / Revue Des Pharmaciens Du Canada",
+                volume: "155(1)",
+                doi: "10.1177/17151635211044474",
+                url: "https://journals.sagepub.com/doi/full/10.1177/17151635211044474",
+                image: "https://peterczhang.com/Images/CPJ.jpg",
+                tag: ["Technology", "Pharmacy"],
+              },
+              {
+                date: "April 27, 2021",
+                title:
+                  "Overcoming vaccine deployment challenges among the hardest to reach: lessons from polio elimination in India",
+                authors:
+                  "Bellatin, A., Hyder, A., Rao, S., Zhang, P. C., & Mcgahan, A. M.",
+                journal: "BMJ Global Health",
+                volume: "6(4)",
+                doi: "10.1136/bmjgh-2021-005125",
+                url: "https://gh.bmj.com/content/6/4/e005125.full",
+                image: "https://peterczhang.com/Images/BMJGH.png",
+                tag: ["Healthcare"],
+              },
+              {
+                date: "November 23, 2020",
+                title:
+                  "Optimization of community-led 3D printing for the production of protective face shields",
+                authors:
+                  "Zhang, P. C., Ahmed, Y., Hussein, I. M., Afenu, E., Feasson, M., & Daud, A.",
+                journal: "3D Printing in Medicine",
+                volume: "6(1)",
+                doi: "10.1186/s41205-020-00089-y",
+                url: "https://threedmedprint.biomedcentral.com/articles/10.1186/s41205-020-00089-y",
+                image:
+                  "https://peterczhang.com/Images/3D Printing in Medicine.png",
+                tag: ["Technology", "Pharmacy"],
+              },
+            ];
 
-                        // Render articles to the DOM
-                        function renderArticles(articles) {
-                            const container = document.getElementById("articleList");
-                            container.innerHTML = "";
+            // Render articles to the DOM
+            function renderArticles(articles) {
+              const container = document.getElementById("articleList");
+              if (!container) return;
+              container.innerHTML = "";
 
-                            articles.forEach(article => {
-                                const column = document.createElement("div");
-                                column.classList.add("column");
+              const grid = document.createElement("div");
+              grid.className = "bento-grid";
 
-                                const articleContent = `
-                                    <a href="${article.url}" target="_blank" style="text-decoration:none;">
-                                        <img src="${article.image}" alt="Article image" 
-                                            style="width: 100%; height: 200px; object-fit: contain; background: white; border-radius: 8px; display: block; margin: 0px;">
-                                        <h4 style="margin: 8px 0 4px 0; color: black;">${article.title}</h4>
-                                    </a>
-                                    <p style="margin: 0 0 4px 0;">${article.date}</p>
-                                    <p style="margin: 0 0 4px 0;">${article.authors}</p>
-                                    ${article.journal ? `<p style="margin: 0 0 4px 0; color: #2d2564; font-weight: 600; letter-spacing: 0.5px;">${article.journal}</p>` : ""}
-                                `;
+              articles.forEach((article) => {
+                const card = document.createElement("article");
+                card.className = "bento-card";
 
-                                column.innerHTML = articleContent;
-                                container.appendChild(column);
-                            });
-                        }
+                const link = document.createElement("a");
+                link.className = "card-link";
+                link.href = article.url || "#";
+                link.target = "_blank";
+                link.rel = "noopener";
 
-                        // Filter and sort articles based on user input
-                        function filterAndSortArticles() {
-                            const input = document.getElementById('searchInput').value.toLowerCase();
-                            const sortOrder = document.getElementById('sortOrder').value;
-                            const tag = document.getElementById('tagFilter').value;
+                const img = document.createElement("img");
+                img.className = "card-media";
+                img.alt = article.title || "";
+                img.loading = "lazy";
+                img.src = article.image || "Images/CPJ.jpg";
 
-                            let filteredArticles = articlesData.filter(article =>
-                                article.title.toLowerCase().includes(input)
-                            );
+                const body = document.createElement("div");
+                body.className = "card-body";
 
-                            if (tag !== "all") {
-                                filteredArticles = filteredArticles.filter(article =>
-                                    article.tag && article.tag.includes(tag)
-                                );
-                            }
+                const content = document.createElement("div");
+                content.className = "card-content";
 
-                            filteredArticles.sort((a, b) => {
-                                return sortOrder === 'newest'
-                                    ? new Date(b.date) - new Date(a.date)
-                                    : new Date(a.date) - new Date(b.date);
-                            });
+                const title = document.createElement("h3");
+                title.className = "card-title";
+                title.textContent = article.title || "";
+                content.appendChild(title);
 
-                            renderArticles(filteredArticles);
-                        }
+                if (article.journal) {
+                  const journal = document.createElement("div");
+                  journal.className = "card-journal";
+                  journal.textContent = article.journal;
+                  content.appendChild(journal);
+                }
 
-                        // Initialize article list on page load
-                        window.onload = filterAndSortArticles;
-                    </script>
-                </div>
-            </div>
+                // Move date/authors into a meta block so they sit toward the bottom
+                const metaBlock = document.createElement("div");
+                metaBlock.className = "card-meta-block";
 
-            <!-- Footer Section -->
-            <div class="footer-container">
-                <div class="footer-item">
-                    <p>
-                        ©
-                        <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang.  All rights reserved.
-                    </p>
-                </div>
-            </div>
+                if (article.date) {
+                  const dateEl = document.createElement("div");
+                  dateEl.className = "card-date";
+                  dateEl.textContent = article.date;
+                  metaBlock.appendChild(dateEl);
+                }
+
+                if (article.authors) {
+                  const authorsEl = document.createElement("div");
+                  authorsEl.className = "card-authors";
+                  authorsEl.textContent = article.authors;
+                  metaBlock.appendChild(authorsEl);
+                }
+
+                body.appendChild(content);
+                body.appendChild(metaBlock);
+
+                // no CTA element - whole card is clickable
+
+                link.appendChild(img);
+                link.appendChild(body);
+                card.appendChild(link);
+                grid.appendChild(card);
+              });
+
+              container.appendChild(grid);
+            }
+
+            // Filter and sort articles based on user input
+            function filterAndSortArticles() {
+              const input = document
+                .getElementById("searchInput")
+                .value.toLowerCase();
+              const sortOrder = document.getElementById("sortOrder").value;
+              const tag = document.getElementById("tagFilter").value;
+
+              let filteredArticles = articlesData.filter((article) =>
+                article.title.toLowerCase().includes(input)
+              );
+
+              if (tag !== "all") {
+                filteredArticles = filteredArticles.filter(
+                  (article) => article.tag && article.tag.includes(tag)
+                );
+              }
+
+              filteredArticles.sort((a, b) => {
+                return sortOrder === "newest"
+                  ? new Date(b.date) - new Date(a.date)
+                  : new Date(a.date) - new Date(b.date);
+              });
+
+              renderArticles(filteredArticles);
+            }
+
+            // Initialize article list on page load
+            window.onload = filterAndSortArticles;
+          </script>
         </div>
-    </body>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="footer-container">
+        <div class="footer-item">
+          <p>
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Peter Chengming Zhang. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
