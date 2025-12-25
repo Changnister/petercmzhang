@@ -3,19 +3,17 @@
   <head>
     <title>Peter Zhang | Scholarly</title>
 
-    <!-- Google Fonts -->
+    <!-- scholarly.html: Scholarly publications (peer-reviewed) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <!-- Main CSS -->
     <link rel="stylesheet" href="CSS/WebCSS.css" />
-    <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Open Graph Meta Tags -->
     <meta name="title" property="og:title" content="Peter Zhang" />
     <meta
       name="description"
@@ -25,7 +23,6 @@
     <meta property="og:type" content="Website" />
     <meta name="image" property="og:image" content="Images/Linkpopup.png" />
 
-    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"
@@ -42,13 +39,13 @@
 
   <body class="page-scholarly">
     <div class="page-container">
-      <!-- Header Section -->
+      <!-- Header -->
       <div class="header-container">
         <div class="header-item">
           <a href="/">PETER ZHANG</a>
         </div>
 
-        <!-- Navigation Bar -->
+        <!-- Navigation -->
         <div class="nav">
           <div class="nav-item">
             <a href="/">Home</a>
@@ -78,18 +75,17 @@
           </div>
         </div>
 
-        <!-- Hamburger Menu for Responsive Navigation -->
+        <!-- Hamburger Menu -->
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
 
-        <!-- Responsive Navigation Script -->
-        <script src="navresponsive.js"></script>
+        <script src="navresponsive.js" defer></script>
       </div>
 
-      <!-- Main Content Section -->
+      <!-- Main Content -->
       <div class="page-hero-title">
         <div class="page-hero-inner">
           <h1>Scholarly</h1>
@@ -101,9 +97,7 @@
 
       <div class="home-container">
         <div class="list-container">
-          <!-- hero image removed -->
-
-          <!-- Filters for Search, Sort, and Tag -->
+          <!-- Filters: Search, Sort, Tag -->
           <div class="filters-row">
             <div class="filter-col">
               <input
@@ -133,9 +127,8 @@
           <!-- Article List Container -->
           <div class="container" id="articleList"></div>
 
-          <!-- Article Data and Filtering Script -->
           <script>
-            // List of articles with metadata
+            // Articles data and filtering
             const articlesData = [
               {
                 date: "October 4, 2025",

@@ -3,9 +3,10 @@
   <head>
     <title>Peter Zhang</title>
 
-    <!-- Google Fonts and CSS -->
+    <!-- index.html: Homepage (hero, featured works, articles) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="CSS/WebCSS.css" />
@@ -13,7 +14,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Open Graph Meta Tags -->
     <meta name="title" property="og:title" content="Peter Zhang" />
     <meta
       name="description"
@@ -23,7 +23,6 @@
     <meta property="og:type" content="Website" />
     <meta name="image" property="og:image" content="Images/Linkpopup.png" />
 
-    <!-- Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-174084882-1"
@@ -38,15 +37,15 @@
     </script>
   </head>
 
-  <body>
+  <body class="home-page">
     <div class="page-container">
-      <!-- Header Section -->
+      <!-- Header -->
       <div class="header-container">
         <div class="header-item">
           <a href="/">PETER ZHANG</a>
         </div>
 
-        <!-- Navigation Bar -->
+        <!-- Navigation -->
         <div class="nav">
           <div class="nav-item">
             <a href="/">Home</a>
@@ -76,163 +75,74 @@
           </div>
         </div>
 
-        <!-- Hamburger Menu for Responsive Navigation -->
+        <!-- Hamburger Menu -->
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
 
-        <!-- Responsive Navigation Script -->
-        <script src="navresponsive.js"></script>
+        <script src="navresponsive.js" defer></script>
       </div>
 
-      <!-- Main Content Section -->
+      <!-- Main Content -->
       <div class="home-container">
         <div class="list-container">
-          <!-- hero image removed -->
-
-          <!-- Hero Blurb Section -->
-          <div class="hero-blurb">
-            <p>I speak and write about AI, healthcare, and innovation.</p>
-            <div class="hero-btn-row">
-              <a
-                href="files/CV.pdf"
-                class="portfolio-btn cv"
-                target="_blank"
-                rel="noopener"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
+          <!-- Hero -->
+          <div class="home-hero">
+            <div class="home-hero-inner">
+              <div class="hero-words">
+                <div class="word">Pharmacist</div>
+                <div class="word">Writer</div>
+                <div class="word">Leader</div>
+                <div class="word">Tech</div>
+              </div>
+              <p class="home-hero-subtitle">
+                I write and speak on topics of healthcare, strategy, and
+                technology.
+              </p>
+              <div class="hero-cta-row">
+                <a
+                  href="files/CV.pdf"
+                  class="portfolio-btn cv"
+                  target="_blank"
+                  rel="noopener"
                 >
-                  <rect x="4" y="2" width="16" height="20" rx="2" />
-                  <path d="M9 8h6M9 12h6M9 16h2" />
-                </svg>
-                CV
-              </a>
-              <a href="booking.html" class="portfolio-btn bookme">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 6-10 7L2 6" />
-                </svg>
-                Book Me
-              </a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect x="4" y="2" width="16" height="20" rx="2" />
+                    <path d="M9 8h6M9 12h6M9 16h2" />
+                  </svg>
+                  CV
+                </a>
+              </div>
             </div>
+            <div
+              class="home-hero-media"
+              style="background-image: url('Images/facesofpharmsci.jpg')"
+            ></div>
           </div>
 
-          <!-- Featured Works Heading -->
+          <!-- Featured Works -->
           <div class="featured-heading-section">
             <h3 class="featured-heading">FEATURED WORKS</h3>
           </div>
 
-          <!-- Article List (Featured Works as bento cards) -->
-          <div class="container" id="articleList">
-            <div class="bento-grid">
-              <article class="bento-card">
-                <a
-                  class="card-link"
-                  href="https://www.thestar.com/opinion/contributors/as-pharmacists-we-must-be-empowered-to-act-in-the-face-of-canadas-painkiller-shortage/article_8d3cf6b5-5a03-4783-b3fe-84722d9d7266.html"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img
-                    class="card-media"
-                    src="Images/DrugShortages.jpg"
-                    alt="As pharmacists..."
-                  />
-                  <div class="card-body">
-                    <div class="card-content">
-                      <h3 class="card-title">
-                        As pharmacists, we must be empowered to act in the face
-                        of Canada’s painkiller shortage
-                      </h3>
-                      <div class="card-journal">Toronto Star</div>
-                    </div>
-                    <div class="card-meta-block">
-                      <div class="card-date">Aug. 10, 2025</div>
-                      <div class="card-authors">
-                        Co-author: Mina Tadrous, PharmD, PhD
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="bento-card">
-                <a
-                  class="card-link"
-                  href="https://canadianhealthcarenetwork.ca/future-healthcare-depends-investments-clinician-entrepreneurship-education"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img
-                    class="card-media"
-                    src="Images/clinicianentrepreneur.jpg"
-                    alt="Clinician entrepreneurship"
-                  />
-                  <div class="card-body">
-                    <div class="card-content">
-                      <h3 class="card-title">
-                        The future of healthcare depends on investments in
-                        clinician entrepreneurship education
-                      </h3>
-                      <div class="card-journal">
-                        Canadian Healthcare Network
-                      </div>
-                    </div>
-                    <div class="card-meta-block">
-                      <div class="card-date">July 31, 2025</div>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="bento-card">
-                <a
-                  class="card-link"
-                  href="https://ai.nejm.org/doi/full/10.1056/AIra2400380"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img
-                    class="card-media"
-                    src="https://peterczhang.com/Images/NEJM-AI.jpg"
-                    alt="RAG in Health Care"
-                  />
-                  <div class="card-body">
-                    <div class="card-content">
-                      <h3 class="card-title">
-                        RAG in Health Care: A Novel Framework for Improving
-                        Communication and Decision-Making by Addressing LLM
-                        Limitations
-                      </h3>
-                      <div class="card-journal">NEJM AI</div>
-                    </div>
-                    <div class="card-meta-block">
-                      <div class="card-date">December 23, 2024</div>
-                      <div class="card-authors">
-                        Ng, K. K. Y., Matsuba, I., &amp; Zhang, P. C.
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </article>
+          <!-- Featured works (homepage) -->
+          <div class="featured-works-container">
+            <div class="container" id="homeFeaturedList">
+              <div class="bento-grid featured-two">
+                <!-- Featured items populated by JS -->
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Spoken At Logos Section -->
+      <!-- Speaking Engagements Section -->
       <div class="spoken-section">
         <h3>SPEAKING ENGAGEMENTS</h3>
         <div class="spoken-logos-row">
@@ -383,6 +293,9 @@
           </div>
         </div>
       </footer>
+      <script src="scripts/renderArticles.js" defer></script>
+      <script src="scripts/allArticlesData.js" defer></script>
+      <script src="scripts/homeFeatured.js" defer></script>
     </div>
   </body>
 </html>

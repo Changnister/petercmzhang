@@ -1,11 +1,16 @@
-/* Center the button row in the hero blurb */
+/* WebCSS: site styles (hero, featured, articles, logos) */
 .hero-btn-row {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1.1em;
 }
-/* === Portfolio Button Styles (CV & Book Me) === */
+
+:root {
+  --content-max-w: 920px;
+  --content-gutter: 16px;
+}
+/* Buttons */
 
 .portfolio-btn {
   display: inline-flex;
@@ -33,12 +38,24 @@
 }
 
 .portfolio-btn.bookme {
-  background: transparent;
-  color: #111;
-  border: 2px solid #111;
+  display: none !important;
 }
 .portfolio-btn.bookme:hover {
-  background: #111;
+}
+
+/* CV button */
+.portfolio-btn.cv {
+  border-radius: 9999px;
+  padding: 0.55rem 2rem;
+}
+
+/* arrow added to the right of the CV label inside the pill */
+.portfolio-btn.cv::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1.05em;
+  line-height: 1;
   color: #fff;
 }
 
@@ -61,7 +78,7 @@
 .featured-heading-section {
   text-align: center;
   background: #fff;
-  padding: 28px 0 0 0;
+  padding: 42px 0 8px 0; /* increase top padding and add small bottom padding */
 }
 .featured-heading {
   font-size: 1.5em;
@@ -96,6 +113,72 @@
     width: 36px;
     height: 3px;
     margin: 8px auto 0 auto;
+  }
+}
+
+/* Homepage featured works: separate, centered two-tile section that matches hero alignment */
+.featured-works-container {
+  max-width: var(--content-max-w); /* align with hero content width */
+  margin: 18px auto 36px auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 var(--content-gutter); /* maintain consistent inner gutters */
+}
+
+#homeFeaturedList {
+  width: 100%;
+  max-width: var(--content-max-w);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0; /* avoid extra inner spacing */
+}
+
+/* Scope container centering to the homepage only so other pages keep original behavior */
+.home-page .container {
+  max-width: var(--content-max-w);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--content-gutter);
+  padding-right: var(--content-gutter);
+  box-sizing: border-box;
+}
+
+.home-page #articleList {
+  width: 100%;
+  max-width: var(--content-max-w);
+  margin: 0 auto 18px auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bento-grid.featured-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  justify-items: stretch;
+  width: 100%;
+}
+
+/* On the homepage (desktop) hide the full article list and show the two-item featured grid.
+   On small screens, show the full article list instead and hide the homepage featured two. */
+.home-page #articleList {
+  display: none;
+}
+.home-page #homeFeaturedList {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .home-page #articleList {
+    display: block;
+  }
+  .home-page #homeFeaturedList {
+    display: none;
+  }
+  .bento-grid.featured-two {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 16px;
   }
 }
 /* Article List Styles */
@@ -662,7 +745,7 @@ a:link {
   margin: 0; /* remove upper spacing to tighten header */
   background: #ffffff;
   z-index: 2000;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   padding-top: 18px; /* increased vertical padding (top) */
   padding-bottom: 18px; /* increased vertical padding (bottom) */
 }
@@ -670,7 +753,7 @@ a:link {
 /* Page title block shown under the header (one-line subtitle) */
 .page-hero-title {
   background: #ffffff;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   padding-top: 20px;
   padding-bottom: 12px;
 }
@@ -685,7 +768,7 @@ a:link {
 .page-hero-inner h1 {
   margin: 0 0 12px 0;
   /* Option C modified per request: not bold, reduced size, capitalized */
-  font-size: clamp(28px, 5.0vw, 52px);
+  font-size: clamp(28px, 5vw, 52px);
   font-weight: 600; /* not bold */
   line-height: 1.06;
   letter-spacing: 1.2px;
@@ -705,10 +788,19 @@ a:link {
 }
 
 @media (max-width: 700px) {
-  .page-hero-title { padding: 18px 16px; }
-  .page-hero-inner { width: calc(100% - 32px); margin: 0 16px; }
-  .page-hero-inner h1 { font-size: clamp(26px, 7.6vw, 40px); }
-  .page-subtitle { font-size: 13px; }
+  .page-hero-title {
+    padding: 18px 16px;
+  }
+  .page-hero-inner {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+  }
+  .page-hero-inner h1 {
+    font-size: clamp(26px, 7.6vw, 40px);
+  }
+  .page-subtitle {
+    font-size: 13px;
+  }
 }
 
 /* Navigation bar styles */
@@ -917,13 +1009,19 @@ a:link {
   }
 
   /* Add a subtle divider above the footer on mobile for separation */
-  .site-footer { border-top: 1px solid rgba(255,255,255,0.04); }
+  .site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
 }
 
 /* Mobile adjustments: hide footer nav links, center rights text, and normalize name weight/spacing */
 @media (max-width: 700px) {
-  .site-footer .footer-nav { display: none; }
-  .site-footer .footer-right p { text-align: center; }
+  .site-footer .footer-nav {
+    display: none;
+  }
+  .site-footer .footer-right p {
+    text-align: center;
+  }
   .site-footer .footer-right .footer-name {
     font-weight: 400 !important; /* do not bold the name */
     margin-left: 6px; /* small space after year */
@@ -1177,6 +1275,113 @@ a:link {
   letter-spacing: 1px;
   line-height: 1.15;
 }
+
+/* Home hero: two-column layout with stacked words on the left and a square image on the right */
+.home-hero {
+  position: relative;
+  max-width: var(
+    --content-max-w
+  ); /* keep hero content aligned to site column */
+  margin: 32px auto; /* vertical spacing above/below */
+  display: flex;
+  align-items: center; /* vertically center image with the title text */
+  justify-content: space-between; /* keep left/right columns spaced */
+  gap: 40px; /* horizontal separation between text and image */
+  padding: 22px var(--content-gutter); /* horizontal gutters match site */
+  color: #0f1724;
+  background: #ffffff;
+}
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.home-hero .home-hero-inner {
+  position: relative;
+  /* slightly narrower left column to free space for the image */
+  width: 48%;
+  margin: 0;
+  z-index: 2;
+  text-align: left;
+}
+.hero-words {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* reduced gap between stacked words */
+  margin-bottom: 8px; /* space before subtitle/button */
+}
+.hero-words .word {
+  font-size: clamp(24px, 5.8vw, 56px);
+  font-weight: 600;
+  line-height: 1.04; /* balanced line-height */
+  color: #0f1724;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.home-hero .hero-cta-row {
+  margin-top: 18px;
+}
+
+/* Subtitle styling inside the hero */
+.home-hero-subtitle {
+  margin: 10px 0 18px 0; /* larger gap under subtitle before CTA */
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 56ch;
+}
+.home-hero-media {
+  width: clamp(140px, 22vw, 300px);
+  height: clamp(140px, 22vw, 300px);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  margin: 0; /* symmetric gutters handled by the centered container */
+  box-shadow: 0 8px 22px rgba(15, 23, 36, 0.08); /* subtle elevation */
+  border: 1px solid rgba(15, 23, 36, 0.04);
+  margin-left: 36px; /* explicit separation from the left column */
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .home-hero .home-hero-inner {
+    width: 62%;
+  }
+  .home-hero-media {
+    width: 40vw;
+    height: 40vw;
+    transform: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 8px 8px;
+  }
+  .home-hero .home-hero-inner {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+    text-align: center;
+  }
+  .hero-words {
+    align-items: center;
+  }
+  .home-hero-media {
+    width: calc(100% - 24px);
+    height: calc((100% - 24px) * 0.72);
+    margin: 0 12px 12px 12px;
+    transform: none;
+  }
+  .hero-words .word {
+    font-size: clamp(18px, 9.6vw, 26px);
+  }
+}
+
 .hero-blurb p {
   font-size: 1.15rem;
   color: #333;
@@ -1246,7 +1451,10 @@ a:link {
 
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(260px, 1fr)); /* three columns with sensible min width */
+  grid-template-columns: repeat(
+    3,
+    minmax(260px, 1fr)
+  ); /* three columns with sensible min width */
   gap: 22px; /* slightly tighter, consistent spacing */
   align-items: stretch; /* make cards stretch to equal height within a row */
   grid-auto-rows: 1fr; /* ensure each grid row distributes space evenly */
@@ -1258,18 +1466,19 @@ a:link {
 .bento-card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .12s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.12s ease;
   height: 100%; /* fill the grid row so cards in a row match heights */
-  border: 1px solid rgba(15,20,40,0.03); /* subtle border to define edges */
+  border: 1px solid rgba(15, 20, 40, 0.03); /* subtle border to define edges */
 }
 
 .bento-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card-media {
@@ -1323,18 +1532,42 @@ a:link {
 }
 
 @media screen and (max-width: 1000px) {
-  .bento-grid { grid-template-columns: repeat(2, minmax(220px, 1fr)); gap: 18px; }
-  .card-media { height: 170px; }
+  .bento-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 18px;
+  }
+  .card-media {
+    height: 170px;
+  }
 }
 
 @media screen and (max-width: 700px) {
   /* reduce visual weight on small screens */
-  .bento-grid { grid-template-columns: repeat(1, minmax(200px, 1fr)); gap: 14px; }
-  .card-media { height: 150px; }
-  .card-title { -webkit-line-clamp: 2; font-size: 16px; }
-  .card-journal { color: #0b2a8a; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0.3px; margin-bottom: 6px; }
+  .bento-grid {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .card-media {
+    height: 150px;
+  }
+  .card-title {
+    -webkit-line-clamp: 2;
+    font-size: 16px;
+  }
+  .card-journal {
+    color: #0b2a8a;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+  }
   /* use fixed gutters for article list so bentos align with filters and hero */
-  #articleList { width: calc(100% - 32px); margin: 0 16px; box-sizing: border-box; }
+  #articleList {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    box-sizing: border-box;
+  }
 }
 
 .card-meta {
@@ -1353,13 +1586,20 @@ a:link {
   margin: 0 0 6px 0;
   color: #111;
 }
-}
 
 /* Use Roboto in the bento cards explicitly */
-.bento-card { font-family: 'Roboto', sans-serif; }
+.bento-card {
+  font-family: "Roboto", sans-serif;
+}
 
 /* Make the whole card clickable: link fills the card */
-.bento-card a.card-link { display: flex; flex-direction: column; height: 100%; color: inherit; text-decoration: none; }
+.bento-card a.card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
 
 /* Read more visual (span) - subtle with arrow */
 .read-more {
@@ -1377,7 +1617,7 @@ a:link {
 }
 
 .read-more::after {
-  content: '\2192'; /* right arrow */
+  content: "\2192"; /* right arrow */
   margin-left: 6px;
   font-weight: 400;
 }
@@ -1405,7 +1645,9 @@ a:link {
 }
 
 /* Position the read-more in the bottom-right of the card body */
-.read-more { display: none !important; }
+.read-more {
+  display: none !important;
+}
 
 /* Page-specific image tuning: scholarly pages often use tall images —
    nudge object-position and give a slightly larger media area */
@@ -1462,17 +1704,38 @@ a:link {
 
 @media screen and (max-width: 700px) {
   /* ensure article list and grid use the same fixed gutters */
-  #articleList { width: calc(100% - 32px); margin: 0 16px; box-sizing: border-box; }
-  .bento-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; width: 100%; box-sizing: border-box; padding: 0; margin: 0; }
-  .bento-card { height: auto; min-height: 320px; }
-  .card-media { height: 160px; }
-  .card-title { -webkit-line-clamp: 3; font-size: 16px; }
+  #articleList {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    box-sizing: border-box;
+  }
+  .bento-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .bento-card {
+    height: auto;
+    min-height: 320px;
+  }
+  .card-media {
+    height: 160px;
+  }
+  .card-title {
+    -webkit-line-clamp: 3;
+    font-size: 16px;
+  }
 
   /* Add bottom padding so the last bento card has breathing room above the footer */
-    /* Keep the total visible gap between last bento and footer consistent when footer top padding changes.
+  /* Keep the total visible gap between last bento and footer consistent when footer top padding changes.
       Target total gap = 32px (articleList padding-bottom + footer top padding).
       With footer top padding now 4px, articleList bottom padding should be 28px. */
-    #articleList { padding-bottom: 28px; }
+  #articleList {
+    padding-bottom: 28px;
+  }
 }
 
 .card-title {
@@ -1506,8 +1769,12 @@ a:link {
 /* CTA was removed: decorative CTA icon deleted to simplify cards */
 
 @media (max-width: 520px) {
-  .bento-card { min-height: 260px; }
-  .card-media { height: 120px; }
+  .bento-card {
+    min-height: 260px;
+  }
+  .card-media {
+    height: 120px;
+  }
 }
 
 /* Footer alignment to match articleList width */

@@ -3,8 +3,9 @@
   <head>
     <title>Peter Zhang | Publications</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="CSS/WebCSS.css" />
@@ -76,7 +77,7 @@
           <span class="bar"></span>
         </div>
 
-        <script src="navresponsive.js"></script>
+        <script src="navresponsive.js" defer></script>
       </div>
 
       <div class="page-hero-title">
@@ -117,6 +118,7 @@
           </div>
           <div class="container" id="articleList"></div>
           <script>
+            // Articles data and renderer
             const articlesData = [
               {
                 date: "November 28, 2025",
@@ -814,7 +816,6 @@
                   content.appendChild(journal);
                 }
 
-                // collect date/authors into a bottom meta block so the card fills vertically
                 const metaBlock = document.createElement("div");
                 metaBlock.className = "card-meta-block";
 
@@ -835,7 +836,6 @@
                 body.appendChild(content);
                 body.appendChild(metaBlock);
 
-                // no CTA element - whole card is clickable
                 link.appendChild(img);
                 link.appendChild(body);
                 card.appendChild(link);
@@ -862,7 +862,6 @@
                     article.journal.toLowerCase().includes(input))
               );
 
-              // Proper tag filtering
               if (tag !== "all") {
                 filteredArticles = filteredArticles.filter(
                   (article) =>
