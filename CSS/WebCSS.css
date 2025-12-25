@@ -61,13 +61,13 @@
 .featured-heading-section {
   text-align: center;
   background: #fff;
-  padding: 48px 0 0 0;
+  padding: 28px 0 0 0;
 }
 .featured-heading {
   font-size: 1.5em;
   font-weight: 900;
   letter-spacing: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
   margin-top: 0px;
   color: #000;
   position: relative;
@@ -128,13 +128,13 @@
   text-align: center;
   margin: 0 0 0 0;
   background: #f7f8fa;
-  padding: 48px 0 64px 0;
+  padding: 32px 0 40px 0;
 }
 .spoken-section h3 {
   font-size: 1.5em;
   font-weight: 900;
   letter-spacing: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
   margin-top: 0px;
   color: #000;
   position: relative;
@@ -205,13 +205,13 @@
   text-align: center;
   margin: 0 0 0 0;
   background: #111;
-  padding: 48px 0 64px 0;
+  padding: 32px 0 40px 0;
 }
 .logos-section h3 {
   font-size: 1.5em;
   font-weight: 900;
   letter-spacing: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
   margin-top: 0px;
   color: #fff;
   position: relative;
@@ -288,31 +288,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 30px 30px;
+  gap: 20px 20px;
   line-height: 24px;
   color: black;
   text-align: left;
   letter-spacing: 1px;
   margin-left: 11%;
   margin-right: 11%;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   width: 75%;
-}
-
-/* Individual article card */
-.column {
-  background-color: white;
-  box-sizing: border-box;
-  width: calc(33.333% - 20px);
-  padding-bottom: 15px;
-}
-
-/* Filter column styling */
-.columnfilters {
-  background-color: white;
-  box-sizing: border-box;
-  width: calc(33.333% - 20px);
-  padding-bottom: 10px;
 }
 
 /* Select dropdown styling */
@@ -527,22 +511,22 @@ a:link {
 
 /* Hero section for bookings page */
 .booking-hero {
-  margin: 32px 0 24px 0;
-  padding: 24px 7% 24px 7%;
-  border-radius: 18px;
+  margin: 18px 0 12px 0;
+  padding: 16px 5% 12px 5%;
+  border-radius: 14px;
   text-align: center;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 .booking-hero-title {
-  font-size: 2.3rem;
-  margin-bottom: 10px;
+  font-size: 1.85rem;
+  margin-bottom: 8px;
   color: #2d2564;
   font-weight: 900;
   letter-spacing: 2px;
-  line-height: 1.1;
-  text-shadow: 0 2px 8px rgba(45, 37, 100, 0.07);
+  line-height: 1.08;
+  text-shadow: 0 1px 6px rgba(45, 37, 100, 0.06);
 }
 @media (max-width: 700px) {
   .booking-hero {
@@ -567,23 +551,67 @@ a:link {
 @media screen and (max-width: 700px) {
   .filters-row {
     flex-direction: column;
-    width: 78%;
-    margin-left: 8%;
-    margin-right: 10%;
-    padding: 14px 6px 8px 6px;
+    /* Use fixed 16px side gutters on mobile for pixel-consistent alignment */
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    padding: 14px 0 8px 0;
+    box-sizing: border-box;
   }
   .filter-col {
     width: 100%;
     margin-bottom: 12px;
+    /* remove internal padding on mobile so controls align flush with container edges */
+    padding: 0;
   }
   .filter-col select {
     padding: 6px 8px;
     font-size: 14px;
   }
   input[type="text"] {
-    padding: 6px 8px;
+    padding: 6px 12px;
     font-size: 14px;
     margin-top: 8px;
+  }
+
+  /* Ensure filter controls fill their column on mobile and align with content width */
+  .filters-row .filter-col select,
+  .filters-row .filter-col input[type="text"],
+  .filters-row input[type="text"],
+  .filters-row select {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* remove any global left/right margins/widths that could push controls inward */
+  .filters-row .filter-col input[type="text"],
+  .filters-row .filter-col select {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    padding-left: 16px; /* match the 16px gutter */
+    padding-right: 16px; /* match the 16px gutter */
+  }
+
+  /* Ensure article/list containers use the same content column width so bento cards
+     align horizontally with the filters on mobile */
+  .container,
+  .list-container {
+    /* Use the same fixed gutters as filters for perfect alignment */
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    box-sizing: border-box;
+    gap: 18px 18px;
+  }
+
+  /* If the bento grid has its own spacing, make sure it fills the container */
+  .bento-grid {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -619,12 +647,68 @@ a:link {
   color: black;
 }
 .header-item {
-  font-size: 24px;
+  font-size: 22px;
   color: black;
   text-align: left;
   font-weight: 900;
-  letter-spacing: 3px;
-  padding-left: 30px;
+  letter-spacing: 2px;
+  padding-left: 18px;
+}
+
+/* Make header sticky with a persistent bottom rule */
+.header-container {
+  position: sticky;
+  top: 0;
+  margin: 0; /* remove upper spacing to tighten header */
+  background: #ffffff;
+  z-index: 2000;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-top: 18px; /* increased vertical padding (top) */
+  padding-bottom: 18px; /* increased vertical padding (bottom) */
+}
+
+/* Page title block shown under the header (one-line subtitle) */
+.page-hero-title {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+/* Align the title block to the article/content column (75% width with 11% margins)
+   so the title lines up with the page content */
+.page-hero-inner {
+  width: 75%;
+  margin-left: 11%;
+  font-size: clamp(24px, 3.2vw + 12px, 40px);
+  font-weight: 700;
+}
+.page-hero-inner h1 {
+  margin: 0 0 12px 0;
+  /* Option C modified per request: not bold, reduced size, capitalized */
+  font-size: clamp(28px, 5.0vw, 52px);
+  font-weight: 600; /* not bold */
+  line-height: 1.06;
+  letter-spacing: 1.2px;
+  color: #0f1724;
+  text-transform: capitalize; /* Title Case (capitalized words) */
+  max-width: 880px;
+}
+.page-subtitle {
+  margin: 0;
+  color: #6a6f78;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  padding-top: 8px;
+  max-width: 820px;
+  border-top: none; /* removed thin divider */
+}
+
+@media (max-width: 700px) {
+  .page-hero-title { padding: 18px 16px; }
+  .page-hero-inner { width: calc(100% - 32px); margin: 0 16px; }
+  .page-hero-inner h1 { font-size: clamp(26px, 7.6vw, 40px); }
+  .page-subtitle { font-size: 13px; }
 }
 
 /* Navigation bar styles */
@@ -704,121 +788,9 @@ a:link {
   margin-left: 20%;
   margin-right: 35%;
 }
+/* Project/half-column styles removed — not referenced by pages */
 
-/* Half column layouts */
-.halfcolumn {
-  float: left;
-  width: 50%;
-  text-align: center;
-  padding-bottom: 35px;
-  padding-top: 10px;
-}
-.halfcolumnprojecttext {
-  float: left;
-  flex-direction: column;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  padding: 25px;
-  font-size: 14px;
-  line-height: 24px;
-  color: black;
-  letter-spacing: 1px;
-  order: 2;
-  width: 100%;
-}
-.halfcolumnproject {
-  float: left;
-  flex-direction: column;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  order: 1;
-}
-.halfcolumnprojectphoto {
-  flex-direction: row;
-  display: flex;
-  width: 100%;
-  order: 1;
-}
-
-/* Project introduction and blurb */
-.project-introduction {
-  font-size: 24px;
-  color: black;
-  text-align: left;
-  font-weight: 900;
-  letter-spacing: 2px;
-  margin-left: 11%;
-  margin-top: 2%;
-  margin-bottom: 8px;
-}
-.list-projectsshape {
-  margin-left: 11%;
-  margin-right: 20%;
-  margin-bottom: 24px;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-}
-.list-projectsblurb {
-  font-size: 16px;
-  line-height: 24px;
-  color: black;
-  text-align: left;
-  letter-spacing: 1px;
-  margin-left: 11%;
-  margin-right: 20%;
-  width: 75%;
-}
-.list-projectsblurb p:nth-child(2) {
-  color: #696969;
-}
-.list-projects {
-  font-size: 14px;
-  line-height: 24px;
-  color: black;
-  text-align: left;
-  letter-spacing: 1px;
-  margin-bottom: 24px;
-}
-.list-projects:last-child {
-  margin-bottom: 0%;
-}
-.list-projects p {
-  margin: 0px;
-}
-.list-projects p:nth-child(2) {
-  color: #696969;
-}
-.list-projects a {
-  font-size: 14px;
-  line-height: 24px;
-  color: black;
-  text-align: left;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-/* Contributions section */
-.contributions {
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Row layout */
-.row {
-  padding-top: 40px;
-  padding-left: 75px;
-  padding-right: 75px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/* Contributions / row blocks removed — not referenced by active pages */
 
 /* Footer styles */
 .footer-container {
@@ -835,6 +807,127 @@ a:link {
   text-align: center;
   letter-spacing: 2px;
   margin-top: auto;
+}
+
+/* New semantic site footer styling (matches reference two-column dark footer) */
+.site-footer {
+  background: #0b0b0b;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  padding: 12px 0; /* slightly tighter desktop padding */
+}
+.site-footer .site-footer-inner {
+  width: 75%;
+  margin-left: 11%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px; /* balanced gap */
+  box-sizing: border-box;
+}
+.site-footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.site-footer .footer-logo a {
+  display: none; /* hide the name/logo text per request */
+}
+.site-footer .footer-nav {
+  color: #d6d6d6;
+  font-size: 15px;
+}
+.site-footer .footer-nav a {
+  color: #d6d6d6;
+  text-decoration: none;
+  margin-right: 12px; /* keep spacing but no bullet characters in HTML */
+  font-size: 14px; /* match nav items */
+  font-weight: 900; /* bold like nav */
+  letter-spacing: 1px; /* same tracking as nav */
+  text-transform: uppercase; /* match nav case */
+  padding: 8px 6px; /* compact padding */
+}
+.site-footer .footer-nav a:hover {
+  color: #ffd700; /* gold accent on hover */
+}
+.site-footer .footer-contact {
+  display: none; /* hide the email/contact line per request */
+}
+.site-footer .footer-right p {
+  color: #9ea3a8;
+  margin: 0;
+  text-align: right;
+  font-size: 14px; /* match nav font-size for better alignment */
+  line-height: 1.2;
+  letter-spacing: 1px; /* subtle tracking to harmonize with nav */
+}
+.site-footer .footer-right .footer-name {
+  color: #ffffff;
+  font-weight: 400; /* do not bold the name */
+  margin-left: 6px;
+}
+
+@media (max-width: 700px) {
+  /* Make top/bottom padding equal for visual balance */
+  .site-footer {
+    padding: 4px 0 8px 0; /* top 4px, bottom 8px to sit slightly lower on mobile */
+  }
+
+  .site-footer .site-footer-inner {
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    flex-direction: column;
+    align-items: center; /* center horizontally for nicer visual */
+    justify-content: center; /* center vertically within the footer area */
+    gap: 4px; /* balanced inner gap */
+  }
+
+  /* Stack left and right, make links easy to tap */
+  .site-footer .footer-left,
+  .site-footer .footer-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center child text/content */
+  }
+
+  .site-footer .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 0; /* remove extra top offset so links sit closer to center */
+  }
+
+  .site-footer .footer-nav a {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px;
+    color: #d6d6d6;
+  }
+
+  .site-footer .footer-nav a:hover {
+    color: #ffd700;
+  }
+
+  .site-footer .footer-right p {
+    text-align: center;
+    margin-top: 0; /* remove extra top margin so text sits nearer the center */
+    color: #bfc3c6;
+    font-size: 14px;
+  }
+
+  /* Add a subtle divider above the footer on mobile for separation */
+  .site-footer { border-top: 1px solid rgba(255,255,255,0.04); }
+}
+
+/* Mobile adjustments: hide footer nav links, center rights text, and normalize name weight/spacing */
+@media (max-width: 700px) {
+  .site-footer .footer-nav { display: none; }
+  .site-footer .footer-right p { text-align: center; }
+  .site-footer .footer-right .footer-name {
+    font-weight: 400 !important; /* do not bold the name */
+    margin-left: 6px; /* small space after year */
+  }
 }
 
 /* List container for main content */
@@ -863,41 +956,10 @@ a:link {
   margin-top: 2%;
   margin-bottom: 30px;
 }
-.list-items {
-  font-size: 16px;
-  line-height: 24px;
-  color: black;
-  text-align: left;
-  letter-spacing: 1px;
-  margin-left: 11%;
-  margin-right: 20%;
-  margin-bottom: 24px;
-  width: 75%;
-}
-.list-items p {
-  margin-top: 0;
-  margin-bottom: 6px;
-}
-.list-items p:nth-child(2) {
-  color: #696969;
-}
-.list-items a {
-  font-size: 16px;
-  line-height: 24px;
-  color: black;
-  text-align: left;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
+/* .list-items removed — not used in current pages */
 
-/* Hide mobile image and hamburger by default */
-.mobile-image {
-  display: none;
-}
+/* Hide hamburger by default on wide screens; mobile helpers cleaned */
 .hamburger {
-  display: none;
-}
-.mobilehome {
   display: none;
 }
 
@@ -921,8 +983,8 @@ a:link {
     align-items: left;
     width: auto;
     justify-content: space-between;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding-bottom: 18px;
+    padding-top: 18px;
   }
   .header-container a {
     text-decoration: none;
@@ -1257,7 +1319,7 @@ a:link {
   margin-top: 0px;
   margin-bottom: 8px;
   letter-spacing: 0.6px;
-  text-transform: uppercase;
+  text-transform: none; /* show publication outlet names in normal case */
 }
 
 @media screen and (max-width: 1000px) {
@@ -1271,7 +1333,8 @@ a:link {
   .card-media { height: 150px; }
   .card-title { -webkit-line-clamp: 2; font-size: 16px; }
   .card-journal { color: #0b2a8a; font-size: 13px; font-weight: 800; text-transform: none; letter-spacing: 0.3px; margin-bottom: 6px; }
-  #articleList { width: 92%; margin-left: 4%; margin-right: 4%; }
+  /* use fixed gutters for article list so bentos align with filters and hero */
+  #articleList { width: calc(100% - 32px); margin: 0 16px; box-sizing: border-box; }
 }
 
 .card-meta {
@@ -1398,11 +1461,18 @@ a:link {
 }
 
 @media screen and (max-width: 700px) {
-  #articleList { width: 92%; margin-left: 4%; margin-right: 4%; }
-  .bento-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+  /* ensure article list and grid use the same fixed gutters */
+  #articleList { width: calc(100% - 32px); margin: 0 16px; box-sizing: border-box; }
+  .bento-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; width: 100%; box-sizing: border-box; padding: 0; margin: 0; }
   .bento-card { height: auto; min-height: 320px; }
   .card-media { height: 160px; }
   .card-title { -webkit-line-clamp: 3; font-size: 16px; }
+
+  /* Add bottom padding so the last bento card has breathing room above the footer */
+    /* Keep the total visible gap between last bento and footer consistent when footer top padding changes.
+      Target total gap = 32px (articleList padding-bottom + footer top padding).
+      With footer top padding now 4px, articleList bottom padding should be 28px. */
+    #articleList { padding-bottom: 28px; }
 }
 
 .card-title {

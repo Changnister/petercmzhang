@@ -2,9 +2,12 @@
 <html>
   <head>
     <title>Bookings</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/WebCSS.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/WebCSS.css" />
     <link rel="shortcut icon" type="image/x-icon" href="Images/Logo.png" />
   </head>
   <body>
@@ -32,12 +35,12 @@
         <div class="socialmedia">
           <div class="media-item">
             <a href="https://www.linkedin.com/in/peterczhang/">
-              <img src="Images/LinkedIn.png">
+              <img src="Images/LinkedIn.png" />
             </a>
           </div>
           <div class="media-item">
             <a href="https://www.instagram.com/petercmzhang/">
-              <img src="Images/Instagram.png">
+              <img src="Images/Instagram.png" />
             </a>
           </div>
         </div>
@@ -50,58 +53,114 @@
         <!-- Responsive Navigation Script -->
         <script src="navresponsive.js"></script>
       </div>
+      <div class="page-hero-title">
+        <div class="page-hero-inner">
+          <h1>Bookings</h1>
+          <p class="page-subtitle">
+            Book speaking engagements and consultations.
+          </p>
+        </div>
+      </div>
+
       <div class="home-container">
         <div class="list-container">
-          <div class="list-image">
-            <img src="Images/mediacover.png">
-          </div>
+          <!-- hero image removed -->
           <div class="booking-hero">
             <h1 class="booking-header-item">BOOK A SPEAKING ENGAGEMENT</h1>
           </div>
-          <form class="booking-form" action="https://formspree.io/f/xldlwrjo" method="POST">
+          <form
+            class="booking-form"
+            action="https://formspree.io/f/xldlwrjo"
+            method="POST"
+          >
             <div class="booking-row">
               <div class="booking-col">
-                <label for="first-name" class="booking-label">First Name:</label>
-                <input id="first-name" name="first-name" required class="booking-input">
+                <label for="first-name" class="booking-label"
+                  >First Name:</label
+                >
+                <input
+                  id="first-name"
+                  name="first-name"
+                  required
+                  class="booking-input"
+                />
               </div>
               <div class="booking-col">
                 <label for="last-name" class="booking-label">Last Name:</label>
-                <input id="last-name" name="last-name" required class="booking-input">
+                <input
+                  id="last-name"
+                  name="last-name"
+                  required
+                  class="booking-input"
+                />
               </div>
             </div>
             <div class="booking-col">
               <label for="email" class="booking-label">Email:</label>
-              <input type="email" id="email" name="email" required class="booking-input">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="booking-input"
+              />
             </div>
             <div class="booking-col">
               <label for="date" class="booking-label">Preferred Date:</label>
-              <input type="date" id="date" name="date" class="booking-input">
+              <input type="date" id="date" name="date" class="booking-input" />
             </div>
             <div class="booking-col">
               <label for="referral" class="booking-label">Organization</label>
-              <input id="referral" name="referral" class="booking-input">
+              <input id="referral" name="referral" class="booking-input" />
             </div>
             <div class="booking-col">
               <label for="message" class="booking-label">Details:</label>
-              <textarea id="message" name="message" rows="5" required class="booking-textarea"></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="booking-textarea"
+              ></textarea>
             </div>
             <div class="booking-col">
-              <button type="submit" class="hero-blurb-btn booking-btn">SUBMIT</button>
+              <button type="submit" class="hero-blurb-btn booking-btn">
+                SUBMIT
+              </button>
             </div>
           </form>
           <div class="booking-direct-email">
             Or email directly at:
-            <a href="mailto:bookpeterzhang@gmail.com" class="booking-direct-link">bookpeterzhang@gmail.com</a>
+            <a
+              href="mailto:bookpeterzhang@gmail.com"
+              class="booking-direct-link"
+              >bookpeterzhang@gmail.com</a
+            >
           </div>
         </div>
       </div>
-      <div class="footer-container">
-        <div class="footer-item">
-          <p>
-            © <script>document.write(new Date().getFullYear())</script> Peter Chengming Zhang.  All rights reserved.
-          </p>
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <div class="footer-left">
+            <nav class="footer-nav">
+              <a href="/">Home</a>
+              <a href="publications.html">Publications</a>
+              <a href="scholarly.html">Scholarly</a>
+              <a href="media.html">Media</a>
+            </nav>
+          </div>
+          <div class="footer-right">
+            <p>
+              ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              <span class="footer-name">Peter Chengming Zhang</span>
+              &nbsp;All rights reserved.
+            </p>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   </body>
 </html>
