@@ -74,13 +74,13 @@
 .featured-heading-section {
   text-align: center;
   background: #fff;
-  padding: 42px 0 8px 0; /* increase top padding and add small bottom padding */
+  padding: 18px 0 6px 0; /* tightened vertical spacing */
 }
 .featured-heading {
   font-size: 1.5em;
   font-weight: 900;
   letter-spacing: 2px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   margin-top: 0px;
   color: #000;
   position: relative;
@@ -115,7 +115,7 @@
 /* Homepage featured works: separate, centered two-tile section that matches hero alignment */
 .featured-works-container {
   max-width: var(--content-max-w); /* align with hero content width */
-  margin: 18px auto 36px auto;
+  margin: 8px auto 24px auto; /* reduced top/bottom spacing */
   width: 100%;
   box-sizing: border-box;
   padding: 0 var(--content-gutter); /* maintain consistent inner gutters */
@@ -282,7 +282,7 @@
 .logos-section {
   text-align: center;
   margin: 0 0 0 0;
-  background: #111;
+  background: #ffffff; /* match page background */
   padding: 32px 0 40px 0;
 }
 .logos-section h3 {
@@ -291,7 +291,7 @@
   letter-spacing: 2px;
   margin-bottom: 18px;
   margin-top: 0px;
-  color: #fff;
+  color: #000; /* dark heading on white background */
   position: relative;
   display: inline-block;
 }
@@ -319,7 +319,25 @@
   position: relative;
   overflow: hidden; /* hide overflow so animation appears clean */
   display: block;
-  padding: 12px 0;
+  padding: 6px 0; /* tighter vertical spacing */
+}
+
+/* Ensure the carousel's left/right edges align with the featured bento grid */
+.logos-scroll-container .container {
+  max-width: var(--content-max-w);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--content-gutter);
+  padding-right: var(--content-gutter);
+  box-sizing: border-box;
+  display: block; /* override .container flex behavior for the carousel */
+  width: 100%;
+}
+
+.logos-scroll {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
 }
 .logos-scroll {
   display: flex;
@@ -339,7 +357,7 @@
   height: auto;
   max-height: 56px;
   object-fit: contain;
-  filter: grayscale(1) brightness(0) invert(1); /* force white logos */
+  filter: grayscale(1) brightness(0); /* force fully black logos */
 }
 .logos-scroll .logo-img:focus {
   outline: 3px solid #ffd700;
@@ -383,7 +401,7 @@
   width: auto;
   padding: 10px 18px;
   border-radius: 10px;
-  filter: grayscale(1) brightness(0) invert(1);
+  filter: grayscale(1) brightness(0);
 }
 @media (max-width: 700px) {
   .logos-scroll.spoken-logos-row .logo-img {
@@ -524,149 +542,7 @@ a:link {
   background: #f0f0fa;
 }
 
-/* Booking form styles (transferred from inline in booking.html) */
-.booking-header-item {
-  font-size: 24px;
-  color: black;
-  text-align: left;
-  font-weight: 900;
-  letter-spacing: 3px;
-  margin-bottom: 0px;
-}
-.booking-form {
-  max-width: 900px;
-  margin: 0 auto 32px auto;
-  padding-left: 0;
-  padding-right: 0;
-}
-.booking-row {
-  display: flex;
-  gap: 32px;
-  margin-left: 0;
-  margin-right: 0;
-}
-.booking-col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-.booking-label {
-  font-weight: normal;
-  display: block;
-  margin-bottom: 8px;
-  width: 100%;
-  font-size: 1.08rem;
-}
-.booking-input {
-  width: 100%;
-  margin-bottom: 18px;
-  padding: 10px 12px;
-  border-radius: 7px;
-  border: 1.5px solid #d1d1e0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.08rem;
-}
-.booking-textarea {
-  width: 100%;
-  margin-bottom: 18px;
-  padding: 10px 12px;
-  border-radius: 7px;
-  border: 1.5px solid #d1d1e0;
-  resize: none;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.08rem;
-}
-.booking-btn {
-  width: 100%;
-  box-sizing: border-box;
-}
-.booking-direct-email {
-  text-align: center;
-  color: #555;
-  font-size: 0.97rem;
-}
-.booking-direct-link {
-  color: black;
-}
-
-@media (max-width: 700px) {
-  .booking-form {
-    max-width: 98vw;
-    padding: 0 2vw;
-  }
-  .booking-row {
-    flex-direction: column;
-    gap: 0;
-  }
-  .booking-col {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .booking-label {
-    margin-bottom: 6px;
-    font-size: 1rem;
-  }
-  .booking-input,
-  .booking-textarea,
-  .booking-btn {
-    font-size: 1rem;
-    padding: 10px 8px;
-    width: 92vw;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin-right: 0;
-  }
-  .booking-hero {
-    padding: 18px 2vw 12px 2vw;
-    max-width: 98vw;
-  }
-  .booking-hero-title,
-  .booking-hero h1 {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-  .booking-direct-email {
-    font-size: 0.89rem;
-    padding: 0 2vw;
-    line-height: 1.5;
-  }
-}
-
-/* Hero section for bookings page */
-.booking-hero {
-  margin: 18px 0 12px 0;
-  padding: 16px 5% 12px 5%;
-  border-radius: 14px;
-  text-align: center;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.booking-hero-title {
-  font-size: 1.85rem;
-  margin-bottom: 8px;
-  color: #2d2564;
-  font-weight: 900;
-  letter-spacing: 2px;
-  line-height: 1.08;
-  text-shadow: 0 1px 6px rgba(45, 37, 100, 0.06);
-}
-@media (max-width: 700px) {
-  .booking-hero {
-    padding: 24px 6% 18px 6%;
-    max-width: 98vw;
-  }
-  .booking-hero-title {
-    font-size: 1.35rem;
-    letter-spacing: 1px;
-  }
-}
+/* Booking styles removed — not used in this site build. */
 
 @media (max-width: 700px) {
   .featured-works-note {
