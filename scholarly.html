@@ -51,13 +51,13 @@
             <a href="/">Home</a>
           </div>
           <div class="nav-item">
-            <a href="publications.html">Publications</a>
+            <a href="publications.html">Writing</a>
           </div>
           <div class="nav-item">
-            <a href="scholarly.html">Scholarly</a>
+            <a href="scholarly.html">Research</a>
           </div>
           <div class="nav-item">
-            <a href="media.html">Media</a>
+            <a href="media.html">Features</a>
           </div>
         </div>
 
@@ -88,7 +88,7 @@
       <!-- Main Content -->
       <div class="page-hero-title">
         <div class="page-hero-inner">
-          <h1>Scholarly</h1>
+          <h1>Research</h1>
           <p class="page-subtitle">
             Peer-reviewed research and academic writing.
           </p>
@@ -375,9 +375,9 @@
           <div class="footer-left">
             <nav class="footer-nav">
               <a href="/">Home</a>
-              <a href="publications.html">Publications</a>
-              <a href="scholarly.html">Scholarly</a>
-              <a href="media.html">Media</a>
+              <a href="publications.html">Writing</a>
+              <a href="scholarly.html">Research</a>
+              <a href="media.html">Features</a>
             </nav>
           </div>
           <div class="footer-right">
@@ -392,6 +392,18 @@
           </div>
         </div>
       </footer>
+      <div class="mobile-footer-rights" aria-hidden="true">
+        © <span class="mobile-footer-year"></span>
+        <span class="footer-name">Peter Chengming Zhang</span>&nbsp;&nbsp;All
+        rights reserved.
+      </div>
+      <script>
+        (function () {
+          var y = new Date().getFullYear();
+          var el = document.querySelector(".mobile-footer-year");
+          if (el) el.textContent = y;
+        })();
+      </script>
     </div>
   </body>
 </html>
