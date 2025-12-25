@@ -51,12 +51,8 @@
 
 /* arrow added to the right of the CV label inside the pill */
 .portfolio-btn.cv::after {
-  content: "\2192";
-  display: inline-block;
-  margin-left: 0.5rem;
-  font-size: 1.05em;
-  line-height: 1;
-  color: #fff;
+  content: none; /* remove arrow from CV button */
+  display: none;
 }
 
 .portfolio-btn svg {
