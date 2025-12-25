@@ -894,6 +894,10 @@ a:link {
   display: block;
   transition: transform 0.12s ease, filter 0.12s ease, opacity 0.12s ease;
 }
+/* Header-specific: slightly larger icons for improved tap targets and visibility */
+.header-container .socialmedia .media-item img {
+  height: 26px; /* increased from 20px */
+}
 .media-item {
   margin-right: 6px;
   padding-top: 2px;
@@ -904,7 +908,7 @@ a:link {
 }
 .media-item img:hover,
 .media-item img:focus {
-  transform: scale(1.08);
+  transform: scale(1.1);
   filter: drop-shadow(0 4px 12px rgba(45, 37, 100, 0.12));
   opacity: 0.95;
 }
