@@ -761,14 +761,14 @@ a:link {
   gap: 8px;
 }
 .media-item img {
-  height: 20px;
+  height: 22px;
   width: auto;
   display: block;
   transition: transform 0.12s ease, filter 0.12s ease, opacity 0.12s ease;
 }
 /* Header-specific: slightly larger icons for improved tap targets and visibility */
 .header-container .socialmedia .media-item img {
-  height: 26px; /* increased from 20px */
+  height: 30px; /* slightly larger for better visibility */
 }
 .media-item {
   margin-right: 6px;

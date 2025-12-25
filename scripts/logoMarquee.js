@@ -48,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
       img.src = item.src;
       img.alt = item.alt || item.src.split("/").pop().replace(/[-_.]/g, " ");
       img.className = "logo-img";
-      img.loading = "lazy";
+      // Force eager loading for marquee images so width measurements work
+      // reliably when the page is served (avoids lazy-loading race conditions).
+      img.loading = "eager";
       frag.appendChild(img);
     });
     return frag;
@@ -73,9 +75,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Compute width of one sequence including gaps
     const gap = 28; // matches CSS .logos-scroll gap
-    const oneSeqWidth =
+    let oneSeqWidth =
       firstSeq.reduce((sum, i) => sum + i.getBoundingClientRect().width, 0) +
       gap * (firstSeq.length - 1);
+
+    // If images didn't report widths (e.g., still unloaded or blocked by lazy-loading),
+    // fall back to using the CSS width of the first image so the marquee still moves.
+    if (!oneSeqWidth || oneSeqWidth < 10) {
+      const cssW =
+        (firstSeq[0] && parseFloat(getComputedStyle(firstSeq[0]).width)) || 140;
+      const fallback = cssW * firstSeq.length + gap * (firstSeq.length - 1);
+      if (fallback > 10) {
+        oneSeqWidth = fallback;
+      }
+    }
 
     // Duplicate sequence so animation can scroll smoothly
     el.appendChild(makeFrag());
