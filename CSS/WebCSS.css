@@ -1150,13 +1150,40 @@ a:link {
     text-overflow: ellipsis;
     background: #111; /* match footer background */
     box-sizing: border-box;
-    max-width: 100%;
+    max-width: 100vw;
+    width: 100vw; /* full-bleed across viewport */
+    position: relative;
+    left: 50%;
+    transform: translateX(
+      -50%
+    ); /* center the 100vw element to remove container gutters */
   }
 
   .mobile-footer-rights .footer-name {
     color: #ffffff; /* keep name styling consistent with desktop */
     font-weight: 700; /* emphasize/bold the name on mobile/tablet */
     margin-left: 6px;
+  }
+}
+
+/* Mobile adjustments: tighten space after featured works, hide header social icons */
+@media (max-width: 700px) {
+  /* Reduce gap between last featured/work grid and footer */
+  .featured-works-container {
+    margin-bottom: 8px; /* smaller gap on mobile */
+    padding-bottom: 0;
+  }
+  /* Ensure home featured list doesn't add extra bottom padding */
+  #homeFeaturedList {
+    padding-bottom: 8px;
+  }
+
+  /* Prevent social icons from appearing inside the mobile nav/header */
+  .header-container .socialmedia {
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
   }
 }
 
@@ -1441,8 +1468,8 @@ a:link {
 .hero-words {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* reduced gap between stacked words */
-  margin-bottom: 8px; /* space before subtitle/button */
+  gap: 12px; /* slightly increased gap for clearer separation */
+  margin-bottom: 12px; /* space before subtitle/button */
 }
 .hero-words .word {
   font-size: clamp(24px, 5.8vw, 56px);
@@ -1454,15 +1481,15 @@ a:link {
   margin: 0;
 }
 .home-hero .hero-cta-row {
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 /* Subtitle styling inside the hero */
 .home-hero-subtitle {
-  margin: 10px 0 18px 0; /* larger gap under subtitle before CTA */
+  margin: 12px 0 14px 0; /* balanced gap under subtitle before CTA */
   color: #444;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   max-width: 56ch;
 }
 .home-hero-media {
@@ -1516,6 +1543,12 @@ a:link {
   }
   .hero-words .word {
     font-size: clamp(18px, 9.6vw, 26px);
+  }
+  .home-hero-subtitle {
+    margin: 10px 12px 14px 12px;
+  }
+  .home-hero .hero-cta-row {
+    margin-top: 12px;
   }
 }
 
