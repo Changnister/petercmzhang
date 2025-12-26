@@ -67,6 +67,15 @@
   // Media (extracted from media.html)
   const MEDIA = [
     {
+      date: "April 25, 2022",
+      title: "2022 - 2025 Strategic Plan",
+      authors: "",
+      journal: "Hemophilia Ontario",
+      url: "https://hemophilia.on.ca/strategic-plan-2022-2025",
+      image: "Images/HOstrategic.png",
+      tag: ["feature"],
+    },
+    {
       date: "December 6, 2024",
       title:
         "Collaborative Care: A Pharmacist's Insights on Research and Medicine with Peter Zhang",
