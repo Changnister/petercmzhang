@@ -758,7 +758,7 @@ a:link {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 8px;
+  gap: 4px; /* tightened spacing between icons */
 }
 .media-item img {
   height: 22px;
@@ -771,7 +771,7 @@ a:link {
   height: 30px; /* slightly larger for better visibility */
 }
 .media-item {
-  margin-right: 6px;
+  margin-right: 0; /* rely on flex gap instead of per-item margins */
   padding-top: 2px;
 }
 .media-item:last-child {
@@ -1037,6 +1037,8 @@ a:link {
     margin-left: 6px;
   }
 }
+
+/* (No body padding added) */
 
 /* Mobile adjustments: tighten space after featured works, hide header social icons */
 @media (max-width: 700px) {
