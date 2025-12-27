@@ -1746,6 +1746,39 @@ a:link {
   width: 100%;
 }
 
+/* Page-specific tuning: make Creative bentos match Publications sizing and alignment */
+.page-creative #articleList {
+  width: 75%;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+.page-creative .filters-row {
+  width: 75%;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+.page-creative .card-media {
+  height: 210px; /* match publications image height */
+  object-position: center center;
+}
+
+/* Reduce top spacing under hero on Creative and move that spacing to the bottom */
+.page-creative .page-hero-title {
+  padding-top: 12px; /* slightly tighter than default */
+  padding-bottom: 8px; /* reduce gap beneath hero */
+}
+.page-creative .home-container {
+  margin-top: 0; /* remove unintended vertical gap */
+}
+.page-creative #articleList {
+  padding-bottom: 64px; /* add breathing room at bottom instead */
+}
+
+/* Prevent creative list from being vertically centered (caused by global centering) */
+.page-creative .list-container {
+  justify-content: flex-start;
+}
+
 @media screen and (max-width: 700px) {
   /* ensure article list and grid use the same fixed gutters */
   #articleList {
