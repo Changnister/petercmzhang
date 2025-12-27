@@ -1830,3 +1830,19 @@ a:link {
   margin-left: 11%;
   margin-right: 11%;
 }
+
+/* Make footer stick to bottom when content is short
+   Use a column flex layout so the main content grows and pushes footer down. */
+html,
+body {
+  height: 100%;
+}
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* The main content wrapper used across pages. Ensure it expands to fill available space. */
+.page-container > .home-container {
+  flex: 1 1 auto;
+}

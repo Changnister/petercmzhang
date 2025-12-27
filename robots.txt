@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://peterczhang.com/sitemap.xml
