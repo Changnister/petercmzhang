@@ -40,8 +40,6 @@
 .portfolio-btn.bookme {
   display: none !important;
 }
-.portfolio-btn.bookme:hover {
-}
 
 /* CV button */
 .portfolio-btn.cv {
@@ -1562,6 +1560,7 @@ a:link {
 .card-title {
   display: -webkit-box;
   -webkit-line-clamp: 3; /* concise and consistent */
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 18px;
@@ -1610,6 +1609,7 @@ a:link {
   }
   .card-title {
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     font-size: 16px;
   }
   .card-journal {
@@ -1636,6 +1636,7 @@ a:link {
 .card-title {
   display: -webkit-box;
   -webkit-line-clamp: 3; /* keep titles concise and consistent */
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 18px; /* balanced presence */
@@ -1817,6 +1818,7 @@ a:link {
   }
   .card-title {
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     font-size: 16px;
   }
 
@@ -1843,20 +1845,174 @@ a:link {
 }
 
 .card-tags {
-  margin-top: auto;
+  margin-top: 6px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .tag {
-  background: #eef2ff;
-  color: #3b3fc4;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 999px;
+  background: transparent;
+  color: #2d2564;
+  padding: 0;
+  font-size: 13px;
+  border-radius: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
 }
 
+.tag::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ffd700; /* gold marker */
+  border-radius: 2px;
+  margin-right: 6px;
+}
+
+.page-creative .card-content {
+  gap: 8px; /* match publications/media spacing between title and journal */
+}
+
+.page-creative .card-content {
+  min-height: 88px; /* increase so journal is pushed down like other pages */
+  display: flex; /* ensure content is a flex column so justify-content works */
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+.page-creative .card-journal {
+  margin-bottom: 8px;
+}
+.page-creative .card-tags {
+  margin-top: 2px; /* sit closer to the date */
+}
+
+/* tighten gap between date and tags on creative cards */
+.page-creative .card-meta-block {
+  gap: 4px;
+}
+
+/* bottom-left tag container inside cards */
+.card-tags-inline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: auto; /* ensure tags sit at the far right */
+}
+
+/* layout the date and inline tags on the same row */
+.card-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.card-meta-row .card-date {
+  flex: 0 0 auto; /* keep date compact on the left */
+}
+.card-meta-row .card-tags-inline {
+  flex: 0 0 auto; /* keep tags compact on the right */
+}
+
+.card-tags-inline .tag {
+  background: transparent;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #2d2564;
+  letter-spacing: 0.6px;
+}
+
+.page-creative .card-meta-block {
+  padding-bottom: 8px; /* keep a small buffer but avoid large extra space */
+}
+
+/* Creative-specific bento formatting tweaks */
+.page-creative .bento-grid {
+  gap: 22px; /* match global bento grid spacing */
+}
+.page-creative .bento-card {
+  border-radius: 10px; /* match global card radius */
+}
+.page-creative .card-body {
+  padding: 18px 16px; /* match global card-body padding */
+}
+.page-creative .card-title {
+  font-size: 18px; /* match global title size */
+  margin-bottom: 6px;
+}
+.page-creative .card-journal {
+  font-size: 15px; /* match global journal size */
+  color: #0f3ba6;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.page-creative .card-meta-block {
+  gap: 6px; /* slightly more room between date, tags, authors */
+  align-items: flex-start;
+}
+.page-creative .card-date {
+  font-weight: 700;
+  color: #2d2564;
+  font-size: 13px;
+}
+.page-creative .card-authors {
+  color: #6b6b6b;
+  font-size: 13px;
+  font-style: italic;
+}
+.page-creative .card-tags {
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 1000px) {
+  .page-creative .card-body {
+    padding: 16px 14px;
+  }
+  .page-creative .card-title {
+    font-size: 17px;
+  }
+}
+/* Mobile: make Creative bentos feel like Publications/Media on small viewports */
+@media screen and (max-width: 700px) {
+  .page-creative .card-body {
+    padding: 12px 12px; /* match compact padding used elsewhere */
+  }
+  .page-creative .card-media {
+    height: 150px; /* consistent with other pages at this breakpoint */
+  }
+  .page-creative .card-title {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .page-creative .card-content {
+    min-height: 64px; /* allow space so journal is pushed down */
+    gap: 8px;
+    justify-content: space-between;
+  }
+  .page-creative .card-journal {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .page-creative .card-meta-block {
+    gap: 6px;
+    padding-bottom: 6px;
+  }
+  .card-meta-row {
+    gap: 10px;
+  }
+}
 /* CTA was removed: decorative CTA icon deleted to simplify cards */
 
 @media (max-width: 520px) {

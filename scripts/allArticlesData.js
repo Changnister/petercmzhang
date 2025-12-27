@@ -9,7 +9,7 @@
       date: "November 28, 2025",
       title:
         "Pharmacists: Bridging the gap between AI and patient-centred care",
-      authors: "Co-author: Mona Samani & Savana Elsays, PharmD",
+      authors: "Co-authors: Mona Samani & Savana Elsays, PharmD",
       journal: "Healthy Debate",
       url: "https://healthydebate.ca/2025/11/topic/pharmacists-bridging-gap-ai-patient-centered-care/",
       image: "Images/pharmacistsareessentialtobridging.png",
@@ -84,6 +84,16 @@
       url: "https://open.spotify.com/episode/7cq77TnWcSRj9okl4T9vN2?si=8a97d222243e46d3",
       image: "Images/collaborativeCFMS.png",
       tag: ["Interview"],
+    },
+    {
+      date: "August 27, 2024",
+      title:
+        "Artificial intelligence holds promise for pharmacy research and care",
+      authors: "",
+      journal: "Leslie Dan Faculty of Pharmacy, University of Toronto",
+      url: "https://www.pharmacy.utoronto.ca/news-announcements/artificial-intelligence-holds-promise-pharmacy-research-and-care",
+      image: "Images/ai_pharmacy_ut.jpg",
+      tag: ["Feature"],
     },
     {
       date: "November 26, 2024",

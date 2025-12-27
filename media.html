@@ -149,7 +149,7 @@
             </div>
             <div class="filter-col">
               <select id="tagFilter" onchange="filterAndSortArticles()">
-                <option value="all">All Topics</option>
+                <option value="all">Filter</option>
                 <option value="Award">Award</option>
                 <option value="Media">Media</option>
                 <option value="Feature">Feature</option>
@@ -182,6 +182,17 @@
                 url: "https://open.spotify.com/episode/7cq77TnWcSRj9okl4T9vN2?si=8a97d222243e46d3",
                 image: "Images/collaborativeCFMS.png",
                 tag: ["Interview"],
+              },
+              {
+                date: "August 27, 2024",
+                title:
+                  "Artificial intelligence holds promise for pharmacy research and care",
+                authors: "",
+                journal:
+                  "Leslie Dan Faculty of Pharmacy, University of Toronto",
+                url: "https://www.pharmacy.utoronto.ca/news-announcements/artificial-intelligence-holds-promise-pharmacy-research-and-care",
+                image: "Images/ai_pharmacy_ut.jpg",
+                tag: ["Feature"],
               },
               {
                 date: "September 24, 2021",
@@ -300,8 +311,7 @@
                 date: "June 15, 2020",
                 title: "3DPPE GTHA Printing Milestone of 20,000 Face Shields",
                 authors: "",
-                journal:
-                  "Stephen Lecce, Ontario Minister of Education, Twitter",
+                journal: "Stephen Lecce, Ontario Minister of Education",
                 url: "https://twitter.com/Sflecce/status/1272631951237709824",
                 image: "Images/stephenlecce3dprinting.jpg",
                 tag: ["Media"],
@@ -310,8 +320,7 @@
                 date: "June 9, 2020",
                 title: "3DPPE GTHA Printing Milestone of 20,000 Face Shields",
                 authors: "",
-                journal:
-                  "Christine Elliott, Onario Minister of Health and Deputy Premier, Twitter",
+                journal: "Christine Elliott, Ontario Minister of Health",
                 url: "https://twitter.com/celliottability/status/1270481211358666753",
                 image: "Images/christineelliott3dprinting.jpg",
                 tag: ["Media"],
@@ -368,7 +377,8 @@
                 if (article.journal) {
                   const journal = document.createElement("div");
                   journal.className = "card-journal";
-                  journal.textContent = article.journal;
+                  const journalText = String(article.journal).replace(/,\s*/g, ' | ');
+                  journal.textContent = journalText;
                   content.appendChild(journal);
                 }
 
@@ -380,7 +390,24 @@
                   const dateEl = document.createElement("div");
                   dateEl.className = "card-date";
                   dateEl.textContent = article.date;
-                  metaBlock.appendChild(dateEl);
+
+                  const metaRow = document.createElement("div");
+                  metaRow.className = "card-meta-row";
+                  metaRow.appendChild(dateEl);
+
+                  if (Array.isArray(article.tag) && article.tag.length) {
+                    const tagsInline = document.createElement("div");
+                    tagsInline.className = "card-tags-inline";
+                    article.tag.forEach((t) => {
+                      const tagEl = document.createElement("span");
+                      tagEl.className = "tag";
+                      tagEl.textContent = t;
+                      tagsInline.appendChild(tagEl);
+                    });
+                    metaRow.appendChild(tagsInline);
+                  }
+
+                  metaBlock.appendChild(metaRow);
                 }
 
                 if (article.authors) {
@@ -396,7 +423,6 @@
                 // no CTA element - whole card is clickable
                 link.appendChild(img);
                 link.appendChild(body);
-                card.appendChild(link);
                 card.appendChild(link);
                 grid.appendChild(card);
               });
