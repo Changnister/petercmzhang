@@ -732,7 +732,7 @@ a:link {
   text-align: center;
   font-weight: 700;
   letter-spacing: 1.4px;
-  margin-right: 18px;
+  margin-right: 0; /* removed fixed right margin to allow even distribution */
   padding: 8px 6px;
   text-transform: uppercase;
   transition: background-color 0.18s, transform 0.12s, color 0.12s;
@@ -751,6 +751,10 @@ a:link {
 .nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly; /* distribute items evenly within nav */
+  flex: 1; /* allow nav to grow between the logo and other header items */
+  max-width: 720px;
+  gap: 10px; /* reduced gap to bring items closer together */
 }
 
 /* Social media icon styles */
@@ -788,6 +792,16 @@ a:link {
   outline: 3px solid #ffd700;
   outline-offset: 4px;
   border-radius: 6px;
+}
+
+/* Hide social icons inside the header for tablet and smaller screens (<=1024px) */
+@media (max-width: 1024px) {
+  .header-container .socialmedia {
+    display: none !important;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
 }
 
 /* Main content container */
