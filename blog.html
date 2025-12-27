@@ -2,12 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Peter Zhang</title>
+    <title>Peter Zhang | Feeling Plateful</title>
 
-    <!-- vitae.html: CV / Vitae page -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="CSS/WebCSS.css" />
@@ -15,21 +18,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta
-      name="description"
-      content="Curriculum vitae and professional background of Peter Zhang."
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://peterczhang.com/vitae.html" />
+    <meta name="description" content="Food writing, recipes, and photos" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://peterczhang.com/blog.html" />
 
-    <meta name="title" property="og:title" content="Peter Zhang | Vitae" />
+    <meta name="title" property="og:title" content="Peter Zhang | Food" />
     <meta
       name="description"
       property="og:description"
-      content="Curriculum vitae and professional background of Peter Zhang."
+      content="Food writing, recipes, and photos by Peter Zhang."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://peterczhang.com/vitae.html" />
+    <meta property="og:url" content="https://peterczhang.com/blog.html" />
     <meta property="og:site_name" content="Peter Zhang" />
     <meta
       name="image"
@@ -39,7 +39,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link
       rel="alternate"
-      href="https://peterczhang.com/vitae.html"
+      href="https://peterczhang.com/blog.html"
       hreflang="en-us"
     />
 
@@ -82,15 +82,13 @@
     </script>
   </head>
 
-  <body>
+  <body class="page-food">
     <div class="page-container">
-      <!-- Header -->
       <div class="header-container">
         <div class="header-item">
           <a href="/">PETER ZHANG</a>
         </div>
 
-        <!-- Navigation -->
         <div class="nav">
           <div class="nav-item">
             <a href="/">Home</a>
@@ -104,9 +102,11 @@
           <div class="nav-item">
             <a href="media.html">Features</a>
           </div>
+          <div class="nav-item">
+            <a href="creative.html">Creative</a>
+          </div>
         </div>
 
-        <!-- Social Media Links -->
         <div class="socialmedia">
           <div class="media-item">
             <a href="https://www.linkedin.com/in/peterczhang/">
@@ -120,7 +120,6 @@
           </div>
         </div>
 
-        <!-- Hamburger Menu -->
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -130,25 +129,73 @@
         <script src="navresponsive.js" defer></script>
       </div>
 
-      <!-- Main Content -->
       <div class="page-hero-title">
         <div class="page-hero-inner">
-          <h1>Vitae</h1>
-          <p class="page-subtitle">
-            Curriculum vitae and professional background.
-          </p>
+          <h1>Food</h1>
+          <p class="page-subtitle">Food writing, recipes, and photos.</p>
         </div>
       </div>
-      <div class="vitae-container">
-        <object data="files/CV.pdf" type="application/pdf" class="vitae-object">
-          <p>
-            Your browser does not support PDFs.
-            <a href="files/CV.pdf">Download the PDF</a>.
-          </p>
-        </object>
+
+      <div class="home-container">
+        <div class="list-container">
+          <div class="filters-row">
+            <div class="filter-col">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search"
+                onkeyup="filterAndSortArticles()"
+              />
+            </div>
+            <div class="filter-col">
+              <select id="sortOrder" onchange="filterAndSortArticles()">
+                <option value="newest">Sort by Latest</option>
+                <option value="oldest">Sort by Earliest</option>
+              </select>
+            </div>
+            <div class="filter-col">
+              <select id="tagFilter" onchange="filterAndSortArticles()">
+                <option value="all">Filter</option>
+                <option value="Recipe">Recipe</option>
+                <option value="Essay">Essay</option>
+                <option value="Photo">Photo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="container" id="articleList"></div>
+
+          <!-- Posts are intentionally empty here. To add posts, create
+               `scripts/foodPosts.js` that assigns `window.FOOD_POSTS = [...]`.
+               The shared renderer `scripts/renderArticles.js` exposes
+               `renderArticlesBento(posts, containerId)` which will render the list.
+               Example (create `scripts/foodPosts.js`):
+
+               window.FOOD_POSTS = [ { date, title, url, image, tag } ];
+
+               You can uncomment the line below to load a posts file when ready. -->
+          <!-- <script src="scripts/foodPosts.js" defer></script> -->
+          <script src="scripts/renderArticles.js" defer></script>
+          <script>
+            window.addEventListener("load", function () {
+              const container = document.getElementById("articleList");
+              if (!container) return;
+              // default placeholder while there are no posts
+              container.innerHTML = '<p class="muted">No posts yet.</p>';
+
+              // if a posts file provides `window.FOOD_POSTS`, render using shared renderer
+              if (Array.isArray(window.FOOD_POSTS)) {
+                if (typeof renderArticlesBento === "function") {
+                  renderArticlesBento(window.FOOD_POSTS, "articleList");
+                } else if (typeof renderArticles === "function") {
+                  renderArticles(window.FOOD_POSTS);
+                }
+              }
+            });
+          </script>
+        </div>
       </div>
 
-      <!-- Footer -->
       <footer class="site-footer">
         <div class="site-footer-inner">
           <div class="footer-left">
@@ -157,6 +204,7 @@
               <a href="publications.html">Writing</a>
               <a href="scholarly.html">Research</a>
               <a href="media.html">Features</a>
+              <a href="creative.html">Creative</a>
             </nav>
           </div>
           <div class="footer-right">
